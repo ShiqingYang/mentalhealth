@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天津师范大学心理危机管理系统</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+            vertical-align: middle;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
+                <span class="sr-only">天津师范大学心理健康管理系统</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">天津师范大学心理健康管理系统</a>
+            <ul class="user-menu">
+                <li class=" pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $sf; ?>&nbsp;&nbsp;:&nbsp;&nbsp;<?php echo $username; ?>
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="logout.php"><span
+                        class="glyphicon glyphicon-log-out"></span>注销</a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <ul class="nav menu">
+        <li class="active"><a href="stuadminadd.php"><span class="glyphicon glyphicon-user"></span>个案信息</a></li>
+        <li><a href="helpinfo.php"><span class="glyphicon glyphicon-info-sign"></span>帮助信息</a></li>
+        <!--
+        <li role="presentation" class="divider"></li>
+        <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>注销</a></li>-->
+    </ul>
+</div><!--/.sidebar-->
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active">个案信息</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header">填写本班学生近况</h3>
+        </div>
+    </div><!--/.row-->
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table data-toggle="table" data-show-refresh="true" data-show-toggle="false"
+                           data-show-columns="true" data-search="true" data-select-item-name="toolbar1"
+                           data-pagination="true">
+                        <thead>
+                        <tr>
+                            <th>学号</th>
+                            <th>姓名</th>
+                            <th>学院</th>
+                            <th>专业</th>
+                            <th>性别</th>
+                            <th>民族</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <?php foreach($rows as $v){?>
+                        <tr>
+                            <td><?php echo $v['stunum']?></td>
+                            <td><?php echo $v['stuname']?></td>
+                            <td><?php echo $v['college']?></td>
+                            <td><?php echo $v['specity']?></td>
+                            <td><?php
+                            if($v['sex']==1) echo '女';
+                            if($v['sex']==0) echo '男'
+                            ?></td>
+                            <td><?php
+                            if($v['nation']==1) echo '少数民族';
+                            else echo '汉'
+                            ?></td>
+                            <td><a href="<?php echo './caseinfo.php?snum='.$v['stunum'] ?>" class="btn btn-info">查看</a><a
+                                    href="<?php echo './stuedit.php?snum='.$v['stunum'] ?>" class="btn btn-warning">编辑</a>
+                                <span
+                                    class="isok glyphicon glyphicon-ok" style="color: #5cb85c; display: none;"></span></td>
+                        </tr>
+                        <?php }
+                    ?>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+</div>    <!--/.main-->
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script>
+
+    !function ($) {
+        $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>天津师范大学心理危机管理系统</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+					<span class="sr-only">天津师范大学心理危机管理系统</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">天津师范大学心理危机管理系统</a>
+				<ul class="user-menu">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> 学院管理员 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#"><span class="glyphicon glyphicon-log-out"></span>注销</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+		
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<ul class="nav menu">
+			<li><a href="index.html"><span class="glyphicon glyphicon-user"></span>个案信息</a></li>
+			<li class="active"><a href="evaluation.html"><span class="glyphicon glyphicon-heart"></span>心理评估</a></li>
+			<li><a href="charts.html"><span class="glyphicon glyphicon-stats"></span>录入上报表</a></li>
+			<li><a href="tables.html"><span class="glyphicon glyphicon-magnet"></span>干预后追踪</a></li>
+			<li><a href="indanger.html"><span class="glyphicon glyphicon-list-alt"></span>预警库</a></li>
+			<li><a href="helpinfo.html"><span class="glyphicon glyphicon-info-sign"></span>帮助信息</a></li>
+			<li role="presentation" class="divider"></li>
+			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span>登录</a></li>
+		</ul>
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+				<li class="active">心理评估</li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h3 class="page-header">心理评估量表填写</h3>
+			</div>
+		</div><!--/.row-->
+        
+
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<form class="form-inline"  action="">
+						<div class="col-lg-10" style="padding: 10px 0;">
+							<label for="inputName">姓名：</label> <input type="text" class="form-control" id="inputName">
+							<label for="inputNum">学号：</label> <input type="text" class="form-control" id="inputNum">
+							<label for="inputCol">学院：</label> <input type="text" class="form-control" id="inputCol">
+							<a href="" class="btn btn-success">查询</a>
+						</div>
+						</form>
+							<table class="table table-bordered" data-pagination="true">
+							<thead>
+							<tr>
+
+								<th data-checkbox="true" >学号</th>
+								<th>姓名</th>
+								<th>学院</th>
+								<th>专业</th>
+								<th>性别</th>
+								<th>民族</th>
+								<th>是否预警</th>
+								<th>是否填写评估量表</th>
+								<th>是否填写干预追踪量表</th>
+								<th>操作</th>
+							</tr>
+							</thead>
+							<tr>
+								<td>1610010100</td>
+								<td>张三</td>
+								<td>文学院</td>
+								<td>中文系</td>
+								<td>女</td>
+								<td>汉</td>
+								<td>否</td>
+								<td>否</td>
+								<td>否</td>
+								<td><a href="caseinfo.html" class="btn btn-success">填写量表</a><a href="" class="btn btn-info disabled">查看心理评估报告</a> </td>
+							</tr>
+
+						</table>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+	</div>	<!--/.main-->
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+	<script>
+
+		!function ($) {
+		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
+		        $(this).find('em:first').toggleClass("glyphicon-minus");      
+		    }); 
+		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+	</script>	
+</body>
+
+</html>

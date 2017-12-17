@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天津师范大学心理危机管理系统</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
+                <span class="sr-only">天津师范大学心理健康管理系统</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">天津师范大学心理健康管理系统</a>
+            <ul class="user-menu">
+                <li class=" pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $_SESSION['user']['sf']; ?>&nbsp;&nbsp;:&nbsp;&nbsp;<?php echo $_SESSION['user']['username']; ?>
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="logout.php"><span
+                        class="glyphicon glyphicon-log-out"></span>注销</a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <ul class="nav menu">
+        <li class="active"><a href="stuadminadd.php"><span class="glyphicon glyphicon-user"></span>个案信息</a></li>
+        <li><a href="helpinfo.php"><span class="glyphicon glyphicon-info-sign"></span>帮助信息</a></li>
+    </ul>
+</div><!--/.sidebar-->
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active">个案信息</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header">查看个案信息</h3>
+        </div>
+    </div><!--/.row-->
+
+
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="panel panel-default">
+                <div class="panel-heading"><span class="glyphicon glyphicon-user"></span>查看学生信息详情&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                        class="btn btn-success"
+                        href="<?php echo './stuedit.php?snum='.$restunum ?>">编辑</a></div>
+                <div class="panel-body" style="padding: 15px;">
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">日期</td>
+                            <td><?php echo $date?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">学号</td>
+                            <td><?php echo $restunum?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">学院</td>
+                            <td><?php echo $college?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">专业</td>
+                            <td><?php echo $specity?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">年级</td>
+                            <td><?php
+							if ($grade==1) echo '大一';
+							if ($grade==2) echo '大二';
+							if ($grade==3) echo '大三';
+							if ($grade==4) echo '大四';
+						?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">性别</td>
+                            <td><?php if ($sex==1) echo '女'; else echo '男'; ?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">民族</td>
+                            <td><?php if ($nation==1) echo '少数民族'; else echo '汉'; ?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">是否独生子女</td>
+                            <td><?php echo $isonlychild?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">家庭所在地</td>
+                            <td><?php echo $familyaddress?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">家庭经济情况</td>
+                            <td><?php echo $familyecnomic?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">家庭结构</td>
+                            <td><?php echo $familystructure?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">亲子关系</td>
+                            <td><?php echo $familyralation?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">健康状况</td>
+                            <td><?php echo $healthy?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">学习水平</td>
+                            <td><?php echo $study?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">社交状况</td>
+                            <td><?php echo $socialship?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">生活事件</td>
+                            <td><?php
+
+							if($sh1=='否'&&$sh2=='否'&&$sh3=='否'&&$sh4=='否'&&$sh5=='否'&&$sh6=='否'&&$sh7=='否'&&$sh8=='否'){
+							    $shr='暂无';
+							}
+							else if($sh1==''&&$sh2==''&&$sh3==''&&$sh4==''&&$sh5==''&&$sh6==''&&$sh7==''&&$sh8==''){
+							    $shr='未填写';
+							}
+							else {
+                                if($sh1=='是') $shr1=' 遭受重大学业挫折 '; else $shr1='';
+                                if($sh2=='是') $shr2=' 被处分或惩罚 '; else $shr2='';
+                                if($sh3=='是') $shr3= ' 罹患疾病（指严重疾病和慢性疾病） '; else $shr3='';
+                                if($sh4=='是') $shr4=' 发生严重人际冲突（包括朋友和亲人） '; else $shr4='';
+                                if($sh5=='是') $shr5=' 失恋 '; else $shr5='';
+                                if($sh6=='是') $shr6=' 债务危机 '; else $shr6='';
+                                if($sh7=='是') $shr7=' 找不到工作 '; else $shr7='';
+                                if($sh8=='是') $shr8=' 沉迷网络 '; else $shr8='';
+                                $shr=$shr1." ".$shr2." ".$shr3." ".$shr4." ".$shr5." ".$shr6." ".$shr7." ".$shr8;
+							}
+							echo $shr;
+							?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">生理反应</td>
+                            <td>
+                                <?php
+							if($sl1='否'&&$sl2=='否'&&$sl3=='否'&&$sl4=='否'){
+    							$slr='暂无';
+    						}else if($sl1=''&&$sl2==''&&$sl3==''&&$sl4==''){
+    						    $slr='未填写';
+    						}else{
+    						    if($sl1=='是') $slr1=' 常常失眠 '; else $slr1='';
+							    if($sl2=='是') $slr2=' 头疼 '; else $slr2='';
+							    if($sl3=='是') $slr3=' 病因不明的不适 '; else $slr3='';
+							    if($sl4=='是') $slr4=' 吃不下饭 '; else $slr4='';
+							    $slr=$slr1." ".$slr2." ".$slr3." ".$slr4;
+    						}
+							echo $slr;
+
+							?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">情绪反应</td>
+                            <td>
+                                <?php
+
+							if($qx1=='否'&&$qx2=='否'&&$qx3=='否'&&$qx4=='否'&&$qx5=='否'&&$qx6=='否'){
+							    $qxr='暂无';
+							}
+							else if($qx1==''&&$qx2==''&&$qx3==''&&$qx4==''&&$qx5==''&&$qx6==''){
+							    $qxr='未填写';
+							}
+							else {
+							    if($qx1=='是') $qxr1=' 紧张、焦虑 '; else $qxr1='';
+                                if($qx2=='是') $qxr2=' 持续时间较长的沮丧 '; else $qxr2='';
+                                if($qx3=='是') $qxr3=' 莫名其妙的恐惧 '; else $qxr3='';
+                                if($qx4=='是') $qxr4=' 忽然变得很冲动 '; else $qxr4='';
+                                if($qx5=='是') $qxr5=' 难以自控的躁动 '; else $qxr5='';
+                                if($qx6=='是') $qxr6=' 明显的精神异常（幻觉、妄想） '; else $qxr6='';
+                                $qxr=$qxr1." ".$qxr2." ".$qxr3." ".$qxr4." ".$qxr5." ".$qxr6;
+							}
+							echo $qxr;
+							?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">行为反应</td>
+                            <td>
+                                <?php
+
+							if($xw1=='否'&&$xw2=='否'&&$xw3=='否'&&$xw4=='否'&&$xw5=='否'){
+							    $xwr='暂无';
+							}
+							else if($xw1==''&&$xw2==''&&$xw3==''&&$xw4==''&&$xw5==''){
+							   $xwr='未填写';
+							}
+							else {
+							    if($xw1=='是') $xwr1=' 忽然变得孤僻 '; else $xwr1='';
+                                if($xw2=='是') $xwr2=' 坐立不安 '; else $xwr2='';
+                                if($xw3=='是') $xwr3=' 流露出自杀的念头 '; else $xwr3='';
+                                if($xw4=='是') $xwr4=' 分发自己的心爱物品 '; else $xwr4='';
+                                if($xw5=='是') $xwr5=' 突然对生死的话题感兴趣 '; else $xwr5='';
+                                $xwr=$xwr1." ".$xwr2." ".$xwr3." ".$xwr4." ".$xwr5;
+							}
+
+							echo $xwr;
+							?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="20%" style="text-align: right; padding-right: 10px;">他人印象</td>
+                            <td>
+                                <?php
+
+							if($tr1=='否'&&$tr2=='否'&&$tr3=='否'&&$tr4=='否'&&$tr5=='否'&&$tr6=='否'&&$tr7=='否'&&$tr8=='否'&&$tr9=='否'&&$tr10=='否'&&$tr11=='否'&&$tr12=='否'&&$tr13=='否'&&$tr14=='否'&&$tr15=='否'&&$tr16=='否'&&$tr17=='否'&&$tr18=='否'){
+							    $trr='暂无';
+							}
+							else if($tr1==''&&$tr2==''&&$tr3==''&&$tr4==''&&$tr5==''&&$tr6==''&&$tr7==''&&$tr8==''&&$tr9==''&&$tr10==''&&$tr11==''&&$tr12==''&&$tr13==''&&$tr14==''&&$tr15==''&&$tr16==''&&$tr17==''&&$tr18=='')
+							{
+							    $trr='未填写';
+							}
+							else
+							{
+							    if($tr1=='是') $trr1=' 脆弱 '; else $trr1='';
+                                if($tr2=='是') $trr2=' 敏感多疑 '; else $trr2='';
+                                if($tr3=='是') $trr3=' 缺乏责任心 '; else $trr3='';
+                                if($tr4=='是') $trr4=' 冲动易怒 '; else $trr4='';
+                                if($tr5=='是') $trr5=' 被动 '; else $trr5='';
+                                if($tr6=='是') $trr6=' 孤僻 '; else $trr6='';
+                                if($tr7=='是') $trr7=' 刻薄 '; else $trr7='';
+                                if($tr8=='是') $trr8=' 缺乏同情心 '; else $trr8='';
+                                if($tr9=='是') $trr9=' 内向 '; else $trr9='';
+                                if($tr10=='是') $trr10=' 悲观 '; else $trr10='';
+                                if($tr11=='是') $trr11=' 极端 '; else $trr11='';
+                                if($tr12=='是') $trr12=' 规矩多 '; else $trr12='';
+                                if($tr13=='是') $trr13=' 爱逃避 '; else $trr13='';
+                                if($tr14=='是') $trr14=' 不爱向他人求助 '; else $trr14='';
+                                if($tr15=='是') $trr15=' 喜欢攻击别人 '; else $trr15='';
+                                if($tr16=='是') $trr16=' 自我要求高 '; else $trr16='';
+                                if($tr17=='是') $trr17=' 自我期望高 '; else $trr17='';
+                                if($tr18=='是') $trr18=' 自我评价低 '; else $trr18='';
+                                $trr=$trr1." ".$trr2." ".$trr3." ".$trr4." ".$trr5." ".$trr6." ".$trr7." ".$trr8." ".$trr9." ".$trr10." ".$trr11." ".$trr12." ".$trr13." ".$trr14." ".$trr15." ".$trr16." ".$trr17." ".$trr18;
+							}
+							echo $trr;
+
+							?>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+</div>    <!--/.main-->
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script>
+
+    !function ($) {
+        $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+</script>
+</body>
+
+</html>

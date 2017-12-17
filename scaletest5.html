@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天津师范大学心理危机管理系统</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script Language="JavaScript">
+        function processForm(form) {
+            var score,score1,score2,scorekg,scorezg,scorelyd;
+            score =score1=score2=scorezg=scorelyd= 0;
+            var arr1 = [1,3,4,5];
+            var arr2=[8,9,10];
+            $('input[type=radio]:checked').each(function (index, item) {
+                score1 += parseInt($(item).val());
+            });
+            $('input[type=checkbox]:checked').each(function (index, item) {
+                score2 += parseInt($(item).val());
+            });
+            //总分
+            score=score1+score2;
+
+            //客观支持分：2，6，7条评分之和
+
+            if (form.c2[0].checked == 1) scorekg = 5;
+            if (form.c2[1].checked == 1) scorekg = 4;
+            if (form.c2[2].checked == 1) scorekg = 3;
+            if (form.c2[3].checked == 1) scorekg = 2;
+            if (form.c2[4].checked == 1) scorekg = 1;
+            scorekg=scorekg+score2;
+
+            //主观支持分：1，3，4，5条评分之和。
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr1) + 1) {
+                    scorezg += parseInt($(item).val());
+                }
+            });
+
+            //对支持的利用度：第8，9，10条。
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr2) + 1) {
+                    scorelyd += parseInt($(item).val());
+                }
+            });
+
+
+
+            console.log(score);
+            form.zf.value = score;
+            form.kgf.value=scorekg;
+            form.zgf.value=scorezg;
+            form.lyd.value=scorelyd;
+
+
+        }</script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
+                <span class="sr-only">天津师范大学心理危机管理系统</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">天津师范大学心理危机管理系统</a>
+            <ul class="user-menu">
+                <li class=" pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $sf; ?>&nbsp;&nbsp;:&nbsp;&nbsp;<?php echo $username; ?>
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="logout.php"><span
+                        class="glyphicon glyphicon-log-out"></span>注销</a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <ul class="nav menu">
+        <li><a href="index.html"><span class="glyphicon glyphicon-user"></span>个案信息</a></li>
+        <li class="active"><a href="evaluation.html"><span class="glyphicon glyphicon-heart"></span>心理评估</a></li>
+        <li><a href="charts.html"><span class="glyphicon glyphicon-stats"></span>录入上报表</a></li>
+        <li><a href="tables.html"><span class="glyphicon glyphicon-magnet"></span>干预后追踪</a></li>
+        <li><a href="indanger.html"><span class="glyphicon glyphicon-list-alt"></span>预警库</a></li>
+        <li><a href="helpinfo.html"><span class="glyphicon glyphicon-info-sign"></span>帮助信息</a></li>
+        <li role="presentation" class="divider"></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-user"></span>登录</a></li>
+    </ul>
+</div><!--/.sidebar-->
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active">心理评估</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header">心理评估量表填写</h3>
+        </div>
+    </div><!--/.row-->
+
+
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    社会支持评定量表
+                </div>
+                <div class="panel-body">
+                    <form method="post" action="">
+                        <table class="test table table-bordered">
+                            <tr>
+                                <td height="49" align="center">
+                                    <div align="left">
+                                        <p>下面的问题用于反映您在社会中所获得的支持，请按各个问题的具体要求，根据您的实际情况写</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">1、您有多少关系密切，可以得到支持和帮助的朋友？</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c1" value="1"> 一个也没有
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c1" value="2"> 1－2个
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c1" value="3"> 3－5个
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c1" value="4"> 6个或6个以上
+                                                </label>
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">2、近一年来您：</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c2" value="1"> 远离家人，且独居一室
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c2" value="2"> 住处经常变动，多数时间和陌生人住在一起
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c2" value="3"> 和同学、同事或朋友住在一起
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c2" value="4"> 和家人住在一起
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">3、 您和邻居：</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c3" value="1"> 相互之间从不关心，只是点头之交
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c3" value="2"> 遇到困难可能稍微关心
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c3" value="3"> 有些邻居很关心您
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c3" value="4"> 大多数邻居都很关心您
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">4、 您和同事：</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c4" value="1"> 相互之间从不关心，只是点头之交
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c4" value="2"> 遇到困难可能稍微关心
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c4" value="3"> 有些同事很关心您
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c4" value="4"> 大多数同事都很关心您
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">5、
+                                        从以下家庭成员得到的支持和照顾：</p>
+                                        <p style="font-weight: 600; text-indent: 2em;">（1）夫妻（恋人）</p>
+                                        <div class="topic">
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c51" value="1"> 无
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c51" value="2"> 极少
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c51" value="3"> 一般
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c51" value="4"> 全力支持
+                                                </label>
+
+                                        </div>
+                                        <p style="font-weight: 600; text-indent: 2em;">（2）父母</p>
+                                        <div class="topic">
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c52" value="1"> 无
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c52" value="2"> 极少
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c52" value="3"> 一般
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c52" value="4"> 全力支持
+                                                </label>
+
+                                        </div>
+                                        <p style="font-weight: 600; text-indent: 2em;">（3）儿女</p>
+                                        <div class="topic">
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c53" value="1"> 无
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c53" value="2"> 极少
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c53" value="3"> 一般
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c53" value="4"> 全力支持
+                                                </label>
+
+                                        </div>
+                                        <p style="font-weight: 600; text-indent: 2em;">（4）兄弟姐妹</p>
+                                        <div class="topic">
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c54" value="1"> 无
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c54" value="2"> 极少
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c54" value="3"> 一般
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c54" value="4"> 全力支持
+                                                </label>
+
+                                        </div>
+                                        <p style="font-weight: 600; text-indent: 2em;">（5）其他成员（如嫂子）</p>
+                                        <div class="topic">
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c55" value="1"> 无
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c55" value="2"> 极少
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c55" value="3"> 一般
+                                                </label>
+
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="c55" value="4"> 全力支持
+                                                </label>
+
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">6、 过去，在您遇到急难情况时，曾经得到的经济支持和解决实际问题的帮助的来源有:</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c6" value="0"> 无任何来源
+                                                </label>
+                                            </p>
+                                        </div>
+                                        <p style="font-weight: 600; text-indent: 2em;">以下来源:（可选多项）</p>
+                                        <div class="topic">
+
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" name="c61" value="1"> 配偶
+                                                </label>
+
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" name="c61" value="1"> 其他家人
+                                                </label>
+
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" name="c61" value="1"> 亲戚
+                                                </label>
+
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" name="c61" value="1"> 同事
+                                                </label>
+
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" name="c61" value="1"> 工作单位
+                                                </label>
+
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" name="c61" value="1"> 党团工会等官方或半官方组织
+                                                </label>
+
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" name="c61" value="1"> 宗教、社会团体等非官方组织
+                                                </label>
+
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" name="c61" value="1"> 其它
+                                                </label>
+
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">7、 过去，在您遇到急难情况时，曾经得到的安慰和关心的来源有：</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c7" value="0"> 无任何来源
+                                                </label>
+                                            </p>
+                                        </div>
+                                        <p style="font-weight: 600; text-indent: 2em;">以下来源:（可选多项）</p>
+                                        <div class="topic">
+
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" name="c70" value="1"> 配偶
+                                            </label>
+
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" name="c70" value="1"> 其他家人
+                                            </label>
+
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" name="c70" value="1"> 亲戚
+                                            </label>
+
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" name="c70" value="1"> 同事
+                                            </label>
+
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" name="c70" value="1"> 工作单位
+                                            </label>
+
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" name="c70" value="1"> 党团工会等官方或半官方组织
+                                            </label>
+
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" name="c70" value="1"> 宗教、社会团体等非官方组织
+                                            </label>
+
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" name="c70" value="1"> 其它
+                                            </label>
+
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">8、
+                                        您遇到烦恼时的倾诉方式：</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c8" value="1"> 从不向任何人诉讼
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c8" value="2"> 只向关系极为密切的1－2个人诉讼
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c8" value="3"> 如果朋友主动询问您会说出来
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c8" value="4"> 主动诉讼自己的烦恼，以获得支持和理解
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">9、 您遇到烦恼时的求助方式：</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c9" value="1"> 只靠自己，不接受别人帮助
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c9" value="2"> 很少请求别人帮助
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c9" value="3"> 有时请求别人帮助
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c9" value="4"> 有困难时经常向家人、亲友、组织求援
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">
+                                        10、对于团体（如党组织、宗教组织、工会、学生会等）组织活动，您：</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c10" value="1"> 从不参加
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c10" value="2"> 偶尔参加
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c10" value="3"> 经常参加
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c10" value="4"> 主动参加并积极活动
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center">
+                                    <input type="submit" class="btn btn-success" value="提交"
+                                           onclick="processForm(this.form)">
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="text" name="zf" size="20">隐藏
+                        <input type="text" name="kgf" size="20">隐藏
+                        <input type="text" name="zgf" size="20">隐藏
+                        <input type="text" name="lyd" size="20">隐藏
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+</div>    <!--/.main-->
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script>
+
+    !function ($) {
+        $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+</script>
+</body>
+
+</html>

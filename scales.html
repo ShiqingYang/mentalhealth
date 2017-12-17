@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天津师范大学心理危机管理系统</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+
+    <![endif]-->
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
+                <span class="sr-only">天津师范大学心理危机管理系统</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">天津师范大学心理危机管理系统</a>
+            <ul class="user-menu">
+                <li class=" pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $sf; ?>&nbsp;&nbsp;:&nbsp;&nbsp;<?php echo $username; ?>
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="logout.php"><span
+                        class="glyphicon glyphicon-log-out"></span>注销</a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <ul class="nav menu">
+        <li><a href="index.html"><span class="glyphicon glyphicon-user"></span>个案信息</a></li>
+        <li class="active"><a href="evaluation.html"><span class="glyphicon glyphicon-heart"></span>心理评估</a></li>
+        <li><a href="charts.html"><span class="glyphicon glyphicon-stats"></span>录入上报表</a></li>
+        <li><a href="tables.html"><span class="glyphicon glyphicon-magnet"></span>干预后追踪</a></li>
+        <li><a href="indanger.html"><span class="glyphicon glyphicon-list-alt"></span>预警库</a></li>
+        <li><a href="helpinfo.html"><span class="glyphicon glyphicon-info-sign"></span>帮助信息</a></li>
+        <li role="presentation" class="divider"></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-user"></span>登录</a></li>
+    </ul>
+</div><!--/.sidebar-->
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active">心理评估</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header">心理评估量表填写</h3>
+        </div>
+    </div><!--/.row-->
+
+
+    <div class="row">
+        <div class="col-lg-10">
+            <h5>填写须知：量表1和量表2为必填量表，其他为选填量表。</h5>
+            <div class="myscalelist  bg-info">
+                <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;量表1 90项症状清单
+              <a href="scaletest3.php?snum=<?php echo $restunum;?>" class="btn btn-default pull-right">填写</a>
+            </div>
+            <div class="myscalelist  bg-info">
+                <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;量表2 自杀自伤评估表
+                <a href="scalesuicide.php?snum=<?php echo $restunum;?>" class="btn btn-default pull-right">填写</a>
+            </div>
+            <hr/>
+            <div class="myscalelist bg-primary">
+                <span class="glyphicon glyphicon-unchecked"></span>&nbsp;&nbsp; 量表3 大学生生活满意度评定量表
+                <a href="scaletest2.php?snum=<?php echo $restunum;?>" class="btn btn-success pull-right">填写</a>
+            </div>
+            <div class="myscalelist bg-primary">
+                <span class="glyphicon glyphicon-unchecked"></span>&nbsp;&nbsp; 量表4 核心自我评价量表
+                <a href="scaletest1.php?snum=<?php echo $restunum;?>" class="btn btn-success pull-right">填写</a>
+            </div>
+            <div class="myscalelist bg-primary">
+            <span class="glyphicon glyphicon-unchecked"></span>&nbsp;&nbsp; 量表5 大五人格量表
+            <a href="scaletest4.php?snum=<?php echo $restunum;?>" class="btn btn-success pull-right">填写</a>
+        </div>
+            <div class="myscalelist bg-primary">
+                <span class="glyphicon glyphicon-unchecked"></span>&nbsp;&nbsp; 量表6 社会支持评定量表
+                <a href="scaletest5.php?snum=<?php echo $restunum;?>" class="btn btn-success pull-right">填写</a>
+            </div>
+            <div class="myscalelist bg-primary">
+                <span class="glyphicon glyphicon-unchecked"></span>&nbsp;&nbsp; 量表7 生活事件量表
+                <a href="scaletest6.php?snum=<?php echo $restunum;?>" class="btn btn-success pull-right">填写</a>
+            </div>
+            <div class="myscalelist bg-primary">
+                <span class="glyphicon glyphicon-unchecked"></span>&nbsp;&nbsp; 量表8 应对方式量表
+                <a href="scaletest7.php?snum=<?php echo $restunum;?>" class="btn btn-success pull-right">填写</a>
+            </div>
+        </div>
+    </div><!--/.row-->
+</div>    <!--/.main-->
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script>
+
+    !function ($) {
+        $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+</script>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天津师范大学心理危机管理系统</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script Language="JavaScript">
+        function processForm(form) {
+            var score = 0;
+
+            var scores=new Array(0,0,0,0,0,0,0,0,0,0);
+            //各平均分
+            var avr1,avr2,avr3,avr4,avr5,avr6,e1,e2;
+            //各因子
+
+            //解决问题
+            var arr1 = [1,2,3,5,8,29,31,40,46,51,55];
+            var e1=[19];
+            console.log(arr1);
+            //自责
+            var arr2 = [15,23,25,37,39,48,50,56,57,59];
+
+            //求助
+            var arr3 = [10,11,14,43,53,60,62];
+            var e2=[36,39,42];
+            //幻想
+            var arr4 = [4,12,17,21,22,26,28,41,45,49];
+            //退避
+            var arr5 = [7,13,16,19,24,27,32,34,35,44,47];
+            //合理化
+            var arr6 = [6,9,18,20,30,33,38,52,54,58,61];
+            
+            //
+            $('input[type=radio]:checked').each(function (index, item) {
+
+                if ($.inArray((index + 1), arr1)+1) {
+                    scores[0] += parseInt($(item).val());
+                    //alert(index+1);
+                }
+            });
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), e1)+1) {
+                    scores[1] += 1-parseInt($(item).val());
+                }
+            });
+            var avgjjwt=((scores[0]+scores[1])/12).toFixed(2);
+
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index+1), arr2)+1) {
+                    scores[2] += parseInt($(item).val());
+                    //alert(index+1);
+                }
+            });
+            var avgzz=scores[2]/arr2.length;
+
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr3)+1) {
+                    scores[3] += parseInt($(item).val());
+                }
+            });
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), e2)+1) {
+                    scores[4] += 1-parseInt($(item).val());
+                }
+            });
+            var avgqz=(scores[3]+scores[4])/(arr3.length+e2.length);
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr4)+1) {
+                    scores[5] += parseInt($(item).val());
+                }
+            });
+
+            var avghx=scores[5]/arr4.length;
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr5)+1) {
+                    scores[6] += parseInt($(item).val());
+                }
+            });
+            var avgtb=scores[6]/arr5.length;
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr6)+1) {
+                    scores[7] += parseInt($(item).val());
+                }
+            });
+
+            var avghlh=scores[7]/arr6.length;
+
+            form.jjwt.value = avgjjwt;
+            form.zz.value=avgzz;
+            form.qz.value=avgqz;
+            form.hx.value=avghx;
+            form.tb.value=avgtb;
+            form.hlh.value=avghlh;
+           console.log(scores);
+        }
+    </script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
+                <span class="sr-only">天津师范大学心理危机管理系统</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">天津师范大学心理危机管理系统</a>
+            <ul class="user-menu">
+                <li class=" pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $sf; ?>&nbsp;&nbsp;:&nbsp;&nbsp;<?php echo $username; ?>
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="logout.php"><span
+                        class="glyphicon glyphicon-log-out"></span>注销</a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <ul class="nav menu">
+        <li><a href="index.html"><span class="glyphicon glyphicon-user"></span>个案信息</a></li>
+        <li class="active"><a href="evaluation.html"><span class="glyphicon glyphicon-heart"></span>心理评估</a></li>
+        <li><a href="charts.html"><span class="glyphicon glyphicon-stats"></span>录入上报表</a></li>
+        <li><a href="tables.html"><span class="glyphicon glyphicon-magnet"></span>干预后追踪</a></li>
+        <li><a href="indanger.html"><span class="glyphicon glyphicon-list-alt"></span>预警库</a></li>
+        <li><a href="helpinfo.html"><span class="glyphicon glyphicon-info-sign"></span>帮助信息</a></li>
+        <li role="presentation" class="divider"></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-user"></span>登录</a></li>
+    </ul>
+</div><!--/.sidebar-->
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active">心理评估</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header">心理评估量表填写</h3>
+        </div>
+    </div><!--/.row-->
+
+
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    应对方式量表
+                </div>
+                <div class="panel-body">
+                    <form action="" method="post">
+                        <table class="test table table-bordered">
+                            <tr>
+                                <td height="49" align="center">
+                                    <div align="left">
+                                        <p> 本问卷的每个条目有两个答案“是”、“否”。请根据自己的情况在每一条目后选择一个答案</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php foreach($sc7 as $v){?>
+                            <tr>
+                                <td>
+                                    <div align="left"><p class="title" style="font-weight: 600; text-indent: 1em;">
+                                        <?php echo $v['id']?>、<?php echo $v['title']?></p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c[<?php echo $v['id']?>]" value="1"> 是
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c[<?php echo $v['id']?>]" value="0"> 否
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php }
+                            ?>
+
+
+                            <tr>
+                                <td align="center">
+                                    <input type="submit" class="btn btn-success" value="提交"
+                                           onclick="processForm(this.form)">
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="text" name="jjwt" size="20" style="display: none">
+                        <input type="text" name="zz" size="20" style="display: none">
+                        <input type="text" name="qz" size="20" style="display: none">
+                        <input type="text" name="hx" size="20" style="display: none">
+                        <input type="text" name="tb" size="20" style="display: none">
+                        <input type="text" name="hlh" size="20" style="display: none">
+                    </form>
+                </div>
+                <div>
+                    <!--可以选择输出报告-->
+                    该生得分情况为：
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>解决问题</td>
+                            <td><?php echo $jjwt;?>分</td>
+                        </tr>
+                        <tr>
+                            <td>自责</td>
+                            <td><?php echo $zz;?>分</td>
+                        </tr>
+                        <tr>
+                            <td>求助</td>
+                            <td><?php echo $qz;?>分</td>
+                        </tr>
+                        <tr>
+                            <td>幻想</td>
+                            <td><?php echo $hx;?>分</td>
+                        </tr>
+                        <tr>
+                            <td>退避</td>
+                            <td><?php echo $tb;?>分</td>
+                        </tr>
+                        <tr>
+                            <td>合理化</td>
+                            <td><?php echo $hlh;?>分</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div><!--/.row-->
+</div>    <!--/.main-->
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script>
+
+    !function ($) {
+        $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+</script>
+</body>
+
+</html>

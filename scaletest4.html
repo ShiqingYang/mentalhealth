@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天津师范大学心理危机管理系统</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script Language="JavaScript">
+        function processForm(form) {
+//            3.总分(原始分)：1题—90题所计原始分累加的值 4.总均分：总分(原始分) /90
+//            5.阴性项目数：1题—90题中被测者选“没有”的题目个数  6.阳性项目数：90-阴性项目数
+//            7.阳性项目平均分：【总分(原始分) -阴性项目数】/阳性项目数
+            var score = 0, avrscore, yin, yang, avryang;
+            if ($('input[type=radio]:checked').length == 60) {
+                $('input[type=radio]:checked').each(function (index, item) {
+                    //alert(index+1);
+                    score += parseInt($(item).val());
+                });
+            } else {
+                alert('您有题目没有作答！');
+            }
+
+            form.answer.value = "你的得分为" + score + "分";
+
+            var arr = [arr1, arr2, arr3, arr4, arr5, arr6, arr7, arr8, arr9, arr10];
+            var scores = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            //情绪稳定性，外倾性，开放性，宜人性，责任心
+            var scoreqxwdx,scorewqx,scorekfx,scoreyrx,scorezrx;
+            //各平均分
+            var avr1, avr2, avr3, avr4, avr5, avr6, avr7, avr8, avr9, avr10;
+
+            //各结论
+            var jls = new Array();
+            //各评语
+            var pys = new Array();
+
+            //情绪稳定性
+            var arr1 = [6, 11, 21, 36, 41, 51, 56];
+            var arr2 = [1, 16, 31, 46];
+            //外倾性
+            var arr3 = [2, 7, 17, 22, 27, 32, 37, 47, 52];
+            var arr4 = [12, 27, 42, 57];
+            //开放性
+            var arr5 = [13, 28, 43, 53, 58];
+            var arr6 = [3, 8, 18, 23, 33, 38, 48];
+            //宜人性
+            var arr7 = [4, 19, 34, 49];
+            var arr8 = [9, 14,24, 29, 39, 44, 54, 59];
+            //责任心
+            var arr9 = [5, 10, 20, 25, 35, 40, 50, 60];
+            var arr10 = [15, 30, 45, 55];
+
+            //
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr1) + 1) {
+                    scores[0] += parseInt($(item).val());
+                    //alert(index+1);
+                    //alert(parseInt($(item).val()));
+                }
+            });
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr2) + 1) {
+                    scores[1] += 4-parseInt($(item).val());
+                    //alert(index+1);
+                }
+            });
+
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr3) + 1) {
+                    scores[2] += parseInt($(item).val());
+                }
+            });
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr4) + 1) {
+                    scores[3] += 4-parseInt($(item).val());
+                }
+            });
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr5) + 1) {
+                    scores[4] += parseInt($(item).val());
+                }
+            });
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr6) + 1) {
+                    scores[5] += 4-parseInt($(item).val());
+                }
+            });
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr7) + 1) {
+                    scores[6] += parseInt($(item).val());
+                }
+            });
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr8) + 1) {
+                    scores[7] += 4-parseInt($(item).val());
+                }
+            });
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr9) + 1) {
+                    scores[8] += parseInt($(item).val());
+                }
+            });
+            $('input[type=radio]:checked').each(function (index, item) {
+                if ($.inArray((index + 1), arr10) + 1) {
+                    scores[9] += 4-parseInt($(item).val());
+                }
+            });
+
+            scoreqxwdx=scores[0]+scores[1];
+            scorewqx=scores[2]+scores[3];
+            scorekfx=scores[4]+scores[5];
+            scoreyrx=scores[6]+scores[7];
+            scorezrx=scores[8]+scores[9];
+
+            console.log(scores);
+            console.log(scoreqxwdx);
+            console.log(scorewqx);
+            console.log(scorekfx);
+            console.log(scoreyrx);
+            console.log(scorezrx);
+        }
+    </script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
+                <span class="sr-only">天津师范大学心理危机管理系统</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">天津师范大学心理危机管理系统</a>
+            <ul class="user-menu">
+                <li class=" pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $sf; ?>&nbsp;&nbsp;:&nbsp;&nbsp;<?php echo $username; ?>
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="logout.php"><span
+                        class="glyphicon glyphicon-log-out"></span>注销</a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <ul class="nav menu">
+        <li><a href="index.html"><span class="glyphicon glyphicon-user"></span>个案信息</a></li>
+        <li class="active"><a href="evaluation.html"><span class="glyphicon glyphicon-heart"></span>心理评估</a></li>
+        <li><a href="charts.html"><span class="glyphicon glyphicon-stats"></span>录入上报表</a></li>
+        <li><a href="tables.html"><span class="glyphicon glyphicon-magnet"></span>干预后追踪</a></li>
+        <li><a href="indanger.html"><span class="glyphicon glyphicon-list-alt"></span>预警库</a></li>
+        <li><a href="helpinfo.html"><span class="glyphicon glyphicon-info-sign"></span>帮助信息</a></li>
+        <li role="presentation" class="divider"></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-user"></span>登录</a></li>
+    </ul>
+</div><!--/.sidebar-->
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active">心理评估</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header">心理评估量表填写</h3>
+        </div>
+    </div><!--/.row-->
+
+
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    大五人格量表
+                </div>
+                <div class="panel-body">
+                    <form action="">
+                        <table class="test table table-bordered">
+                            <tr>
+                                <td height="49" align="center">
+                                    <div align="left">
+                                        <p>
+                                            请仔细阅读以下问题，每个问题从非常不符合到非常符合有5种选择。如果该描述明显不符合您或者您十分不赞同，请选择“1”；如果该描述多数情况下不符合您或者您不太赞同，请选择“2”；如果该描述半正确半错误，您无法确定或介于中间，请选择“3”；如果该描述多半符合您或者您比较赞同，请选择“4”；如果该描述明显符合您或者您十分赞同，请选择“5”。</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php foreach($sc3 as $v){?>
+                            <tr>
+                                <td>
+                                    <div align="left"><p class="title" style="font-weight: 600; text-indent: 1em;">
+                                        <?php echo $v['id']?>、 <?php echo $v['title']?></p>
+                                        <div class="topic">
+
+                                            <label class="radio-inline">
+                                                <input type="radio" name="c[<?php echo $v['id']?>]" value="1"> 1
+                                            </label>
+
+                                            <label class="radio-inline">
+                                                <input type="radio" checked name="c[<?php echo $v['id']?>]" value="2"> 2
+                                            </label>
+
+                                            <label class="radio-inline">
+                                                <input type="radio" name="c[<?php echo $v['id']?>]" value="3"> 3
+                                            </label>
+
+                                            <label class="radio-inline">
+                                                <input type="radio" name="c[<?php echo $v['id']?>]" value="4"> 4
+                                            </label>
+
+                                            <label class="radio-inline">
+                                                <input type="radio" name="c[<?php echo $v['id']?>]" value="5"> 5
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php }
+                            ?>
+
+
+                            <tr>
+                                <td align="center">
+                                    <input type="submit" class="btn btn-success" value="提交"
+                                           onclick="processForm(this.form)">
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="text" name="answer" size="20">隐藏
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+</div>    <!--/.main-->
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script>
+
+    !function ($) {
+        $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+</script>
+</body>
+
+</html>

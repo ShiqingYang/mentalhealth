@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天津师范大学心理危机管理系统</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        .form-group{
+            margin:5px;
+        }
+        .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+            padding:0;
+            padding-bottom: 5px;
+            vertical-align: middle;
+        }
+        .form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline{
+            padding-top: 3px;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<?php
+$stunum=$_GET['stunum'];
+?>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
+                <span class="sr-only">天津师范大学心理健康管理系统</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">天津师范大学心理健康管理系统</a>
+            <ul class="user-menu">
+                <li class=" pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $_SESSION['user']['sf']; ?>&nbsp;&nbsp;:&nbsp;&nbsp;<?php echo $_SESSION['user']['username']; ?>
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="logout.php"><span
+                        class="glyphicon glyphicon-log-out"></span>注销</a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <ul class="nav menu">
+        <li class="active"><a href="stuadminadd.php"><span class="glyphicon glyphicon-user"></span>个案信息</a></li>
+        <li><a href="helpinfo.php"><span class="glyphicon glyphicon-info-sign"></span>帮助信息</a></li>
+        <!--
+        <li role="presentation" class="divider"></li>
+        <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>注销</a></li>-->
+    </ul>
+</div><!--/.sidebar-->
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><span class="glyphicon glyphicon-home"></span></li>
+            <li class="active">个案信息</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header">编辑学生近况信息</h3>
+        </div>
+    </div><!--/.row-->
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading"><span class="glyphicon glyphicon-wrench"></span>填写</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" method="post">
+                        <fieldset>
+                            <!-- Name input-->
+                            <table class="table table-bordered table-striped">
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">添加日期</label>
+                                            <div class="col-md-9">
+                                                <span style="line-height: 33px;"><?php echo $date;?></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="col-md-3 control-label" style="color: #e1aa2e; font-size:17px;">个人基本信息</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">学号</label>
+                                            <div class="col-md-9">
+                                                <?php echo $restunum;?>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">姓名</label>
+                                            <div class="col-md-9">
+                                                <?php echo $stuname;?>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <!-- Email input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">学院</label>
+                                            <div class="col-md-9">
+                                                <select name="college" class="form-control" id="college">
+                                                    <option value="<?php echo $college; ?>"><?php echo $college; ?></option>
+                                                    <option value="外国语学院">外国语学院</option>
+                                                    <option value="新闻传播学院">新闻传播学院</option>
+                                                    <option value="历史文化学院">历史文化学院</option>
+                                                    <option value="政治与行政学院">政治与行政学院</option>
+                                                    <option value="马克思主义学院">马克思主义学院</option>
+                                                    <option value="教育科学学院">教育科学学院</option>
+                                                    <option value="初等教育学院">初等教育学院</option>
+                                                    <option value="体育科学学院">体育科学学院</option>
+                                                    <option value="体育竞赛训练中心">体育竞赛训练中心</option>
+                                                    <option value="法学院">法学院</option>
+                                                    <option value="经济学院">经济学院</option>
+                                                    <option value="管理学院">管理学院</option>
+                                                    <option value="音乐与影视学院">音乐与影视学院</option>
+                                                    <option value="美术与设计学院">美术与设计学院</option>
+                                                    <option value="数学科学学院">数学科学学院</option>
+                                                    <option value="物理与材料科学学院">物理与材料科学学院</option>
+                                                    <option value="化学学院">化学学院</option>
+                                                    <option value="地理与环境科学学院">地理与环境科学学院</option>
+                                                    <option value="计算机与信息工程学院">计算机与信息工程学院</option>
+                                                    <option value="文学院">文学院</option>
+                                                    <option value="国际教育交流学院">国际教育交流学院</option>
+                                                    <option value="生命科学学院">生命科学学院</option>
+                                                    <option value="教师教育学院">教师教育学院</option>
+                                                    <option value="软件学院">软件学院</option>
+                                                    <option value="电子与通信工程学院">电子与通信工程学院</option>
+                                                    <option value="心理行为研究院">心理行为研究院</option>
+                                                    <option value="其他">其他</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">年级</label>
+                                            <div class="col-md-9">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($grade==1) echo "checked"; ?> name="grade" id="g1" value="1"> 大一
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($grade==2) echo "checked"; ?> name="grade" id="g2" value="2"> 大二
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($grade==3) echo "checked"; ?> name="grade" id="g3" value="3"> 大三
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($grade==4) echo "checked"; ?> name="grade" id="g4" value="4"> 大四
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">民族</label>
+                                            <div class="col-md-9">
+                                                    <label class="radio-inline">
+                                                        <input type="radio" <?php if($nation==0) echo "checked"; ?> name="nation" id="han" value="0"> 汉族
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" <?php if($nation==1) echo "checked"; ?> name="nation" id="shao" value="1"> 少数民族
+                                                    </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">性别</label>
+                                            <div class="col-md-9">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sex==0) echo "checked"; ?> name="sex" id="man" value="0"> 男
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sex==1) echo "checked"; ?> name="sex" id="woman" value="1"> 女
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">是否独生子女</label>
+                                            <div class="col-md-9">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($isonlychild=='是') echo "checked"; ?> name="isonlychild" id="iso" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($isonlychild=='否') echo "checked"; ?> name="isonlychild" id="noto" value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">家庭所在地</label>
+                                            <div class="col-md-9">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familyaddress=='大城市') echo "checked"; ?> name="familyaddress" id="city" value="大城市"> 大城市
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familyaddress=='中小城市') echo "checked"; ?> name="familyaddress" id="scity" value="中小城市"> 中小城市
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familyaddress=='小城镇') echo "checked"; ?> name="familyaddress" id="town" value="小城镇"> 小城镇
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familyaddress=='农村') echo "checked"; ?> name="familyaddress" id="village" value="农村"> 农村
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">家庭经济情况</label>
+                                            <div class="col-md-9">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familyecnomic=='富裕') echo "checked"; ?> name="familyecnomic" id="e1" value="富裕"> 富裕
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familyecnomic=='小康') echo "checked"; ?> name="familyecnomic" id="e2" value="小康"> 小康
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familyecnomic=='温饱') echo "checked"; ?> name="familyecnomic" id="e3" value="温饱"> 温饱
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familyecnomic=='贫困') echo "checked"; ?> name="familyecnomic" id="e4" value="贫困"> 贫困
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">家庭结构</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familystructure=='正常') echo "checked"; ?> name="familystructure" id="s6" value="正常"> 正常
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familystructure=='孤儿') echo "checked"; ?> name="familystructure" id="s1" value="孤儿"> 孤儿
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familystructure=='寄养') echo "checked"; ?> name="familystructure" id="s2" value="寄养"> 寄养
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familystructure=='单亲') echo "checked"; ?> name="familystructure" id="s3" value="单亲"> 单亲
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familystructure=='父母离异') echo "checked"; ?> name="familystructure" id="s4" value="父母离异"> 父母离异
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familystructure=='父母婚姻不和睦') echo "checked"; ?> name="familystructure" id="s5" value="父母婚姻不和睦"> 父母婚姻不和睦
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">亲子关系</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familyralation=='和睦') echo "checked"; ?> name="familyralation" id="r1" value="和睦"> 和睦
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familyralation=='疏离') echo "checked"; ?> name="familyralation" id="r2" value="疏离"> 疏离
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($familyralation=='不合') echo "checked"; ?> name="familyralation" id="r3" value="不合"> 不合
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">健康状况</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($healthy=='健康') echo "checked"; ?> name="healthy" id="h1" value="健康"> 健康
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($healthy=='曾患重大疾病') echo "checked"; ?> name="healthy" id="h2" value="曾患重大疾病"> 曾患重大疾病
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($healthy=='目前患有疾病') echo "checked"; ?> name="healthy" id="h3" value="目前患有疾病"> 目前患有疾病
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($healthy=='目前患有严重疾病') echo "checked"; ?> name="healthy" id="h4" value="目前患有严重疾病"> 目前患有严重疾病
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">学习水平</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($study=='好') echo "checked"; ?> name="study" id="study1" value="好"> 好
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($study=='一般') echo "checked"; ?> name="study" id="study2" value="一般"> 一般
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($study=='不好') echo "checked"; ?> name="study" id="study3" value="不好"> 不好
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($study=='极差') echo "checked"; ?> name="study" id="study4" value="极差"> 极差
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">社交情况</label>
+                                            <div class="col-md-9 checkbox">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($socialship=='一般') echo "checked"; ?> name="socialship" id="social2" value="一般"> 一般
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($socialship=='人际关系差') echo "checked"; ?> name="socialship" id="social3" value="人际关系差"> 人际关系差
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($socialship=='人际关系极差') echo "checked"; ?> name="socialship" id="social4" value="人际关系极差"> 人际关系极差
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label" style="color: #e1aa2e; font-size:17px;">近期动态</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" style="color: #2aabd2;">生活事件</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">遭受重大学业挫折</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh1=='是') echo "checked"; ?> name="sh1"  value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh1=='否') echo "checked"; ?> name="sh1"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">被处分或惩罚</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh2=='是') echo "checked"; ?> name="sh2" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh2=='否') echo "checked"; ?> name="sh2"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">罹患疾病（指严重疾病和慢性疾病）</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh3=='是') echo "checked"; ?> name="sh3" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh3=='否') echo "checked"; ?> name="sh3"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">发生严重人际冲突（包括朋友和亲人）</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh4=='是') echo "checked"; ?> name="sh4" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh4=='否') echo "checked"; ?> name="sh4"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">失恋</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh5=='是') echo "checked"; ?> name="sh5" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh5=='否') echo "checked"; ?> name="sh5"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">债务危机</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh6=='是') echo "checked"; ?> name="sh6" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh6=='否') echo "checked"; ?> name="sh6"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">找不到工作</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh7=='是') echo "checked"; ?> name="sh7" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh7=='否') echo "checked"; ?> name="sh7"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">沉迷网络</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh8=='是') echo "checked"; ?> name="sh8" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sh8=='否') echo "checked"; ?> name="sh8"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" style="color: #2aabd2;">生理反应</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">常常失眠</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sl1=='是') echo "checked"; ?> name="sl1" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sl1=='否') echo "checked"; ?> name="sl1"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">头疼</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sl2=='是') echo "checked"; ?> name="sl2" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sl2=='否') echo "checked"; ?> name="sl2"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">病因不明的不适</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sl3=='是') echo "checked"; ?> name="sl3" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sl3=='否') echo "checked"; ?> name="sl3"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">吃不下饭</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sl4=='是') echo "checked"; ?> name="sl4" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($sl4=='否') echo "checked"; ?> name="sl4"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" style="color: #2aabd2;">情绪反应</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">紧张、焦虑</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($qx1=='是') echo "checked"; ?> name="qx1" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($qx1=='否') echo "checked"; ?> name="qx1"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">持续时间较长的沮丧</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($qx2=='是') echo "checked"; ?> name="qx2" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($qx2=='否') echo "checked"; ?> name="qx2"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">莫名其妙的恐惧</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($qx3=='是') echo "checked"; ?> name="qx3" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($qx3=='否') echo "checked"; ?> name="qx3"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">忽然变得很冲动</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($qx4=='是') echo "checked"; ?> name="qx4" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($qx4=='否') echo "checked"; ?> name="qx4"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">难以自控的躁动</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($qx5=='是') echo "checked"; ?> name="qx5" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($qx5=='否') echo "checked"; ?> name="qx5"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">明显的精神异常（幻觉、妄想）</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($qx6=='是') echo "checked"; ?> name="qx6" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($qx6=='否') echo "checked"; ?> name="qx6"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" style="color: #2aabd2;">行为反应</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">忽然变得孤僻</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($xw1=='是') echo "checked"; ?> name="xw1" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($xw1=='否') echo "checked"; ?> name="xw1"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">坐立不安</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($xw2=='是') echo "checked"; ?> name="xw2" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($xw2=='否') echo "checked"; ?> name="xw2"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">流露出自杀的念头</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($xw3=='是') echo "checked"; ?> name="xw3" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($xw3=='否') echo "checked"; ?> name="xw3"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">分发自己的心爱物品</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($xw4=='是') echo "checked"; ?> name="xw4" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($xw4=='否') echo "checked"; ?> name="xw4"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">突然对生死的话题感兴趣</label>
+                                            <div class="col-md-9 radio">
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($xw5=='是') echo "checked"; ?> name="xw5" value="是"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" <?php if($xw5=='否') echo "checked"; ?> name="xw5"  value="否"> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label" style="color: #e1aa2e; font-size:17px;">他人印象</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">脆弱</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr1=='是') echo "checked"; ?> name="tr1" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr1=='否') echo "checked"; ?> name="tr1"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">敏感多疑</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr2=='是') echo "checked"; ?> name="tr2" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr2=='否') echo "checked"; ?> name="tr2"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">缺乏责任心</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr3=='是') echo "checked"; ?> name="tr3" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr3=='否') echo "checked"; ?> name="tr3"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">冲动易怒</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr4=='是') echo "checked"; ?> name="tr4" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr4=='否') echo "checked"; ?> name="tr4"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">被动</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr5=='是') echo "checked"; ?> name="tr5" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr5=='否') echo "checked"; ?> name="tr5"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">孤僻</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr6=='是') echo "checked"; ?> name="tr6" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr6=='否') echo "checked"; ?> name="tr6"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">刻薄</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr7=='是') echo "checked"; ?> name="tr7" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr7=='否') echo "checked"; ?> name="tr7"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">缺乏同情心</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr8=='是') echo "checked"; ?> name="tr8" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr8=='否') echo "checked"; ?> name="tr8"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">内向</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr9=='是') echo "checked"; ?> name="tr9" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr9=='否') echo "checked"; ?> name="tr9"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">悲观</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr10=='是') echo "checked"; ?> name="tr10" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr10=='否') echo "checked"; ?> name="tr10"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">极端</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr11=='是') echo "checked"; ?> name="tr11" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr11=='否') echo "checked"; ?> name="tr11"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">规矩多</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr12=='是') echo "checked"; ?> name="tr12" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr12=='否') echo "checked"; ?> name="tr12"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">爱逃避</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr13=='是') echo "checked"; ?> name="tr13" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr13=='否') echo "checked"; ?> name="tr13"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">不爱向他人求助</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr14=='是') echo "checked"; ?> name="tr14" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr14=='否') echo "checked"; ?> name="tr14"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">喜欢攻击别人</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr15=='是') echo "checked"; ?> name="tr15" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr15=='否') echo "checked"; ?> name="tr15"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label class="col-md-3 control-label">自我要求高</label>
+                                        <div class="col-md-9 radio">
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr16=='是') echo "checked"; ?> name="tr16" value="是"> 是
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" <?php if($tr16=='否') echo "checked"; ?> name="tr16"  value="否"> 否
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr><tr>
+                                <td>
+                                    <div class="form-group">
+                                    <label class="col-md-3 control-label">自我期望高</label>
+                                    <div class="col-md-9 radio">
+                                        <label class="radio-inline">
+                                            <input type="radio" <?php if($tr17=='是') echo "checked"; ?> name="tr17" value="是"> 是
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" <?php if($tr17=='否') echo "checked"; ?> name="tr17"  value="否"> 否
+                                        </label>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr><tr>
+                                <td>
+                                    <div class="form-group">
+                                    <label class="col-md-3 control-label">自我评价低</label>
+                                    <div class="col-md-9 radio">
+                                        <label class="radio-inline">
+                                            <input type="radio" <?php if($tr18=='是') echo "checked"; ?> name="tr18" value="是"> 是
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" <?php if($tr18=='否') echo "checked"; ?> name="tr18"  value="否"> 否
+                                        </label>
+                                    </div>
+                                    </div>
+                                </td>
+
+
+
+                                <tr>
+                                    <td>
+                                        <!-- Message body -->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="message">备注</label>
+                                            <div class="col-md-9">
+                                                <textarea class="form-control" id="message" name="message"
+                                                          placeholder="" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <!-- Form actions -->
+                                        <div class="form-group">
+                                            <div class="col-md-9" style="text-align: center; margin: 10px 0;">
+
+                                                <button type="submit" class="btn btn-success btn-md"
+                                                        style="margin-right: 20px;">提交
+                                                </button>
+                                                <button type="reset" class="btn btn-default btn-md">重置
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+</div>    <!--/.main-->
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script>
+
+    !function ($) {
+        $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+</script>
+</body>
+
+</html>

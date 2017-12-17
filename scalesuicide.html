@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天津师范大学心理危机管理系统</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script Language="JavaScript">
+        function processForm(form) {
+            var score;
+            score= 0;
+            $('input[type=radio]:checked').each(function (index, item) {
+                score += parseInt($(item).val());
+            });
+            console.log(score);
+            if(score>=0 && score <=2){
+                form.py.value="危机程度不大，报告心理中心，需要观察随访";
+            }else if(score==3 || score==4){
+                form.py.value="存在一定风险，报告主管领导和心理中心，密切观察；24小时监护。";
+            }else if(score==5 || score==6){
+                form.py.value="危机程度较高，报告主管领导和心理中心，密切观察；24小时监护；通知父母，送精神科就诊。";
+            }else if(score>=7){
+                form.py.value="危机程度很高，立即通知家长，送精神科就诊，住院治疗。";
+            }
+            form.score.value = score;
+        }</script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
+                <span class="sr-only">天津师范大学心理危机管理系统</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">天津师范大学心理危机管理系统</a>
+            <ul class="user-menu">
+                <li class=" pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $sf; ?>&nbsp;&nbsp;:&nbsp;&nbsp;<?php echo $username; ?>
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="logout.php"><span
+                        class="glyphicon glyphicon-log-out"></span>注销</a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <ul class="nav menu">
+        <li><a href="index.html"><span class="glyphicon glyphicon-user"></span>个案信息</a></li>
+        <li class="active"><a href="evaluation.html"><span class="glyphicon glyphicon-heart"></span>心理评估</a></li>
+        <li><a href="charts.html"><span class="glyphicon glyphicon-stats"></span>录入上报表</a></li>
+        <li><a href="tables.html"><span class="glyphicon glyphicon-magnet"></span>干预后追踪</a></li>
+        <li><a href="indanger.html"><span class="glyphicon glyphicon-list-alt"></span>预警库</a></li>
+        <li><a href="helpinfo.html"><span class="glyphicon glyphicon-info-sign"></span>帮助信息</a></li>
+        <li role="presentation" class="divider"></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-user"></span>登录</a></li>
+    </ul>
+</div><!--/.sidebar-->
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active">心理评估</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header">心理评估量表填写</h3>
+        </div>
+    </div><!--/.row-->
+
+
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    社会支持评定量表
+                </div>
+                <div class="panel-body">
+                    <form method="post" action="">
+                        <table class="test table table-bordered">
+                            <tr>
+                                <td height="49" align="center">
+                                    <div align="left">
+                                        <p>请根据危机人员实际情况，填写以下5项</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">1、自杀、自伤计划</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c1" value="0"> 没有
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c1" value="1"> 有大概想法，无具体方案
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c1" value="2"> 有具体方案和手段
+                                                </label>
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">2、既往相关自杀、自伤史</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c2" value="0"> 没有
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c2" value="1"> 有，但时隔1年以上
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c2" value="2"> 有，且在1年内
+                                                </label>
+                                            </p>
+
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">3、 目前现实压力</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c3" value="0"> 没有
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c3" value="1"> 有，但压力不大
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c3" value="2"> 有，且压力很大
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">4、 目前支持资源</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c4" value="0"> 支持资源的充分
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c4" value="1"> 有支持资源，但不充分
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c4" value="2"> 没有支持资源
+                                                </label>
+                                            </p>
+
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="left"><p style="font-weight: 600; text-indent: 0;">5、
+                                        临床诊断</p>
+                                        <div class="topic">
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c51" value="0"> 无精神或心理疾病
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c51" value="1"> 患有心理疾病但已得到治疗
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label class="radio">
+                                                    <input type="radio" name="c51" value="2"> 患有精神疾病且未接受治疗
+                                                </label>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <input type="submit" class="btn btn-success" value="提交"
+                                           onclick="processForm(this.form)">
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="text" name="score" size="20" style="display: none;">
+                        <textarea name="py" id="py" cols="30" rows="10" style="display: none;"></textarea>
+                    </form>
+                    <div>总分：<?php echo $score;?>分</div>
+                    <div>建议：<?php echo $py; ?></div>
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+</div>    <!--/.main-->
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script>
+
+    !function ($) {
+        $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+</script>
+</body>
+
+</html>
