@@ -1,6 +1,7 @@
 <?php
 require_once 'PHPWord.php';
-
+$stunum='161';
+$date=date('Y-m');
 $PHPWord = new PHPWord();
 
 $document = $PHPWord->loadTemplate('Template.docx');
@@ -19,5 +20,5 @@ $document->setValue('Value10', 'Pluto');
 $document->setValue('weekday', date('l'));
 $document->setValue('time', date('H:i'));
 
-$document->save('Solarsystem.docx');
+$document->save('XX量表'.$stunum.$date.'.docx');
 ?>

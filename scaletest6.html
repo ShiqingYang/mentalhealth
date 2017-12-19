@@ -25,10 +25,10 @@
 
             form.answer.value = "你的得分为" + score + "分";
 
-            var arr=[arr1,arr2,arr3,arr4,arr5,arr6,arr7,arr8,arr9,arr10];
-            var scores=new Array(0,0,0,0,0,0,0,0,0,0);
+            var arr = [arr1, arr2, arr3, arr4, arr5, arr6, arr7, arr8, arr9, arr10];
+            var scores = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             //各平均分
-            var avr1,avr2,avr3,avr4,avr5,avr6,avr7,avr8,avr9,avr10;
+            var avr1, avr2, avr3, avr4, avr5, avr6, avr7, avr8, avr9, avr10;
             //躯体化 12
             var arr1 = [1, 4, 12, 27, 40, 42, 48, 49, 52, 53, 56, 58];
             //强迫症状 10
@@ -51,239 +51,239 @@
             var arr10 = [19, 44, 59, 60, 64, 66, 89];
             //
             $('input[type=radio]:checked').each(function (index, item) {
-                if ($.inArray((index + 1), arr1)+1) {
+                if ($.inArray((index + 1), arr1) + 1) {
                     scores[0] += parseInt($(item).val());
                     //alert(index+1);
                     //alert(parseInt($(item).val()));
                 }
             });
             $('input[type=radio]:checked').each(function (index, item) {
-                if ($.inArray((index+1), arr2)+1) {
+                if ($.inArray((index + 1), arr2) + 1) {
                     scores[1] += parseInt($(item).val());
                     //alert(index+1);
                 }
             });
 
             $('input[type=radio]:checked').each(function (index, item) {
-                if ($.inArray((index + 1), arr3)+1) {
+                if ($.inArray((index + 1), arr3) + 1) {
                     scores[2] += parseInt($(item).val());
                 }
             });
             $('input[type=radio]:checked').each(function (index, item) {
-                if ($.inArray((index + 1), arr4)+1) {
+                if ($.inArray((index + 1), arr4) + 1) {
                     scores[3] += parseInt($(item).val());
                 }
             });
             $('input[type=radio]:checked').each(function (index, item) {
-                if ($.inArray((index + 1), arr5)+1) {
+                if ($.inArray((index + 1), arr5) + 1) {
                     scores[4] += parseInt($(item).val());
                 }
             });
             $('input[type=radio]:checked').each(function (index, item) {
-                if ($.inArray((index + 1), arr6)+1) {
+                if ($.inArray((index + 1), arr6) + 1) {
                     scores[5] += parseInt($(item).val());
                 }
             });
             $('input[type=radio]:checked').each(function (index, item) {
-                if ($.inArray((index + 1), arr7)+1) {
+                if ($.inArray((index + 1), arr7) + 1) {
                     scores[6] += parseInt($(item).val());
                 }
             });
             $('input[type=radio]:checked').each(function (index, item) {
-                if ($.inArray((index + 1), arr8)+1) {
+                if ($.inArray((index + 1), arr8) + 1) {
                     scores[7] += parseInt($(item).val());
                 }
             });
             $('input[type=radio]:checked').each(function (index, item) {
-                if ($.inArray((index + 1), arr9)+1) {
+                if ($.inArray((index + 1), arr9) + 1) {
                     scores[8] += parseInt($(item).val());
                 }
             });
             $('input[type=radio]:checked').each(function (index, item) {
-                if ($.inArray((index + 1), arr10)+1) {
+                if ($.inArray((index + 1), arr10) + 1) {
                     scores[9] += parseInt($(item).val());
                 }
             });
-            avr1=scores[0]/12;
-            if(avr1<1.5){
-                jls[0]='无';
-                pys[0]='无';
-            }else if(avr1>=1.5 && avr1<2.5 ){
-                jls[0]='轻';
-                pys[0]='有时感到头昏或头痛，同时还伴有一些肌肉酸 痛或腰痛。稍感疲倦。';
-            }else if(avr1>=2.5 && avr1<3.5 ){
-                jls[0]='中';
-                pys[0]='经常有头晕、头痛，恶心、胃部不适、心慌、 胸闷、疲乏、虚弱等躯体不适的感觉。';
-            }else if(avr1>=3.5 && avr1<4.5 ){
-                jls[0]='重';
-                pys[0]='躯体症状明显，如头痛、腰痛等加剧，情绪烦 躁不安；浑身无力。';
-            }else if(avr1>=4.5){
-                jls[0]='严重';
-                pys[0]='躯体不适感非常明显，躯体症状表现强烈，如 严重的头痛、腰痛、恶心、纳差等，并伴有呼吸困难，整日情绪焦躁不安，常担心会突然死亡。';
+            avr1 = scores[0] / 12;
+            if (avr1 < 1.5) {
+                jls[0] = '无';
+                pys[0] = '无';
+            } else if (avr1 >= 1.5 && avr1 < 2.5) {
+                jls[0] = '轻';
+                pys[0] = '有时感到头昏或头痛，同时还伴有一些肌肉酸 痛或腰痛。稍感疲倦。';
+            } else if (avr1 >= 2.5 && avr1 < 3.5) {
+                jls[0] = '中';
+                pys[0] = '经常有头晕、头痛，恶心、胃部不适、心慌、 胸闷、疲乏、虚弱等躯体不适的感觉。';
+            } else if (avr1 >= 3.5 && avr1 < 4.5) {
+                jls[0] = '重';
+                pys[0] = '躯体症状明显，如头痛、腰痛等加剧，情绪烦 躁不安；浑身无力。';
+            } else if (avr1 >= 4.5) {
+                jls[0] = '严重';
+                pys[0] = '躯体不适感非常明显，躯体症状表现强烈，如 严重的头痛、腰痛、恶心、纳差等，并伴有呼吸困难，整日情绪焦躁不安，常担心会突然死亡。';
             }
 
 
-            avr2=scores[1]/10;
-            if(avr2<1.5){
-                jls[1]='无';
-                pys[1]='无';
-            }else if(avr2>=1.5 && avr2<2.5 ){
-                jls[1]='轻';
-                pys[1]='头脑中有时会产生不必要的想法，感到难以完 成任务，注意力不集中，但时间较短，尚能学习和生活。';
-            }else if(avr2>=2.5 && avr2<3.5 ){
-                jls[1]='中';
-                pys[1]='反复的重复做的动作明显增多，一天中有几个 时段忘记性大，注意力不能集中，头脑一片空白，难以作出决定，对所做事情难以完成。';
-            }else if(avr2>=3.5 && avr2<4.5 ){
-                jls[1]='重';
-                pys[1]='每天有4～6小时重复某些动作，影响日常生活学习，忘记性大、不能集中注意力、头脑中有不必要的想法不能摆脱，做事难以作出决定。';
-            }else if(avr2>=4.5){
-                jls[1]='严重';
-                pys[1]='整天做些反复的动作或被一些不必要的想法困扰，已经明显的影响正常的学习和生活，忘记性大，无法抗拒，内心十分痛苦。';
+            avr2 = scores[1] / 10;
+            if (avr2 < 1.5) {
+                jls[1] = '无';
+                pys[1] = '无';
+            } else if (avr2 >= 1.5 && avr2 < 2.5) {
+                jls[1] = '轻';
+                pys[1] = '头脑中有时会产生不必要的想法，感到难以完 成任务，注意力不集中，但时间较短，尚能学习和生活。';
+            } else if (avr2 >= 2.5 && avr2 < 3.5) {
+                jls[1] = '中';
+                pys[1] = '反复的重复做的动作明显增多，一天中有几个 时段忘记性大，注意力不能集中，头脑一片空白，难以作出决定，对所做事情难以完成。';
+            } else if (avr2 >= 3.5 && avr2 < 4.5) {
+                jls[1] = '重';
+                pys[1] = '每天有4～6小时重复某些动作，影响日常生活学习，忘记性大、不能集中注意力、头脑中有不必要的想法不能摆脱，做事难以作出决定。';
+            } else if (avr2 >= 4.5) {
+                jls[1] = '严重';
+                pys[1] = '整天做些反复的动作或被一些不必要的想法困扰，已经明显的影响正常的学习和生活，忘记性大，无法抗拒，内心十分痛苦。';
             }
 
-            avr3=scores[2]/9;
-            if(avr3<1.5){
-                jls[2]='无';
-                pys[2]='无';
-            }else if(avr3>=1.5 && avr3<2.5 ){
-                jls[2]='轻';
-                pys[2]='同异性相处时感到不自在，有时感到比不上他人。';
-            }else if(avr3>=2.5 && avr3<3.5 ){
-                jls[2]='中';
-                pys[2]='对别人讲话比较留心，常担心别人会议论自 己，有时会感到别人不理解、不同情自己。';
-            }else if(avr3>=3.5 && avr3<4.5 ){
-                jls[2]='重';
-                pys[2]='很少与异性交往，感情非常容易受到伤害，常 有自卑感，总感到比不上他人，在公共场合感到很不舒服。但对别人的评价非常在意，有时显得神经过敏，偶尔会表现出被动攻击，影响其人际关系，朋友较少。';
-            }else if(avr3>=4.5){
-                jls[2]='严重';
-                pys[2]='自卑感很强，极少与陌生人接触，不参与公共 活动，对别人的言谈、注视感到很不自在，感到自己不被理解，对旁人责备求全，朋友极少。';
+            avr3 = scores[2] / 9;
+            if (avr3 < 1.5) {
+                jls[2] = '无';
+                pys[2] = '无';
+            } else if (avr3 >= 1.5 && avr3 < 2.5) {
+                jls[2] = '轻';
+                pys[2] = '同异性相处时感到不自在，有时感到比不上他人。';
+            } else if (avr3 >= 2.5 && avr3 < 3.5) {
+                jls[2] = '中';
+                pys[2] = '对别人讲话比较留心，常担心别人会议论自 己，有时会感到别人不理解、不同情自己。';
+            } else if (avr3 >= 3.5 && avr3 < 4.5) {
+                jls[2] = '重';
+                pys[2] = '很少与异性交往，感情非常容易受到伤害，常 有自卑感，总感到比不上他人，在公共场合感到很不舒服。但对别人的评价非常在意，有时显得神经过敏，偶尔会表现出被动攻击，影响其人际关系，朋友较少。';
+            } else if (avr3 >= 4.5) {
+                jls[2] = '严重';
+                pys[2] = '自卑感很强，极少与陌生人接触，不参与公共 活动，对别人的言谈、注视感到很不自在，感到自己不被理解，对旁人责备求全，朋友极少。';
             }
 
-            avr4=scores[3]/13;
-            if(avr4<1.5){
-                jls[3]='无';
-                pys[3]='无';
-            }else if(avr4>=1.5 && avr4<2.5 ){
-                jls[3]='轻';
-                pys[3]='偶尔会感到精力下降以及感到孤独、苦闷。感到事情比以前难做。';
-            }else if(avr4>=2.5 && avr4<3.5 ){
-                jls[3]='中';
-                pys[3]='有时感到精力下降，对事物不感兴趣，对前途失去信心，孤独感增加。';
-            }else if(avr4>=3.5 && avr4<4.5 ){
-                jls[3]='重';
-                pys[3]='经常责怪自己，感到任何事情都很难做，容易伤感哭泣，对异性的兴趣减退，感到非常孤独。';
-            }else if(avr4>=4.5){
-                jls[3]='严重';
-                pys[3]='总是过分担忧，感到自己没有什么价值，常有结束自己生命的念头，自觉精力下降严重，容易哭泣伤感，觉得异常苦闷、孤独。';
+            avr4 = scores[3] / 13;
+            if (avr4 < 1.5) {
+                jls[3] = '无';
+                pys[3] = '无';
+            } else if (avr4 >= 1.5 && avr4 < 2.5) {
+                jls[3] = '轻';
+                pys[3] = '偶尔会感到精力下降以及感到孤独、苦闷。感到事情比以前难做。';
+            } else if (avr4 >= 2.5 && avr4 < 3.5) {
+                jls[3] = '中';
+                pys[3] = '有时感到精力下降，对事物不感兴趣，对前途失去信心，孤独感增加。';
+            } else if (avr4 >= 3.5 && avr4 < 4.5) {
+                jls[3] = '重';
+                pys[3] = '经常责怪自己，感到任何事情都很难做，容易伤感哭泣，对异性的兴趣减退，感到非常孤独。';
+            } else if (avr4 >= 4.5) {
+                jls[3] = '严重';
+                pys[3] = '总是过分担忧，感到自己没有什么价值，常有结束自己生命的念头，自觉精力下降严重，容易哭泣伤感，觉得异常苦闷、孤独。';
             }
 
-            avr5=scores[4]/10;
-            if(avr5<1.5){
-                jls[4]='无';
-                pys[4]='无';
-            }else if(avr5>=1.5 && avr5<2.5 ){
-                jls[4]='轻';
-                pys[4]='有时会觉得心跳加快、心神不宁、有紧张感， 要赶快把事情做完。';
-            }else if(avr5>=2.5 && avr5<3.5 ){
-                jls[4]='中';
-                pys[4]='常无缘无故地感到害怕，心跳的很厉害，觉得 所熟悉的环境都变的陌生，但过一会儿会有所缓解。';
-            }else if(avr5>=3.5 && avr5<4.5 ){
-                jls[4]='重';
-                pys[4]='经常神经过敏，忽然感到一阵阵恐惧，浑身发 抖，心跳的很厉害。';
-            }else if(avr5>=4.5){
-                jls[4]='严重';
-                pys[4]='常常无缘无故地感到恐惧，浑身发抖，感到坐 立不安不能安静，熟悉的东西变的很陌生，总有一种催促感。';
+            avr5 = scores[4] / 10;
+            if (avr5 < 1.5) {
+                jls[4] = '无';
+                pys[4] = '无';
+            } else if (avr5 >= 1.5 && avr5 < 2.5) {
+                jls[4] = '轻';
+                pys[4] = '有时会觉得心跳加快、心神不宁、有紧张感， 要赶快把事情做完。';
+            } else if (avr5 >= 2.5 && avr5 < 3.5) {
+                jls[4] = '中';
+                pys[4] = '常无缘无故地感到害怕，心跳的很厉害，觉得 所熟悉的环境都变的陌生，但过一会儿会有所缓解。';
+            } else if (avr5 >= 3.5 && avr5 < 4.5) {
+                jls[4] = '重';
+                pys[4] = '经常神经过敏，忽然感到一阵阵恐惧，浑身发 抖，心跳的很厉害。';
+            } else if (avr5 >= 4.5) {
+                jls[4] = '严重';
+                pys[4] = '常常无缘无故地感到恐惧，浑身发抖，感到坐 立不安不能安静，熟悉的东西变的很陌生，总有一种催促感。';
             }
 
-            avr6=scores[5]/6;
-            if(avr6<1.5){
-                jls[5]='无';
-                pys[5]='无';
-            }else if(avr6>=1.5 && avr6<2.5 ){
-                jls[5]='轻';
-                pys[5]='偶尔有想摔坏或破坏东西的冲动，有时不能控 制自己的情绪。';
-            }else if(avr6>=2.5 && avr6<3.5 ){
-                jls[5]='中';
-                pys[5]='有时会烦恼和激动，不能很好的控制自己的脾气和情绪，会与人争论，有想破坏东西的冲动。';
-            }else if(avr6>=3.5 && avr6<4.5 ){
-                jls[5]='重';
-                pys[5]='经常有想打人或想摔东西的冲动，容易激惹，不能控制自己的行为和情绪。';
-            }else if(avr6>=4.5){
-                jls[5]='严重';
-                pys[5]='非常容易激惹，好与人争论，经常主动攻击他人，完全不能控制自己的情绪和行为。';
+            avr6 = scores[5] / 6;
+            if (avr6 < 1.5) {
+                jls[5] = '无';
+                pys[5] = '无';
+            } else if (avr6 >= 1.5 && avr6 < 2.5) {
+                jls[5] = '轻';
+                pys[5] = '偶尔有想摔坏或破坏东西的冲动，有时不能控 制自己的情绪。';
+            } else if (avr6 >= 2.5 && avr6 < 3.5) {
+                jls[5] = '中';
+                pys[5] = '有时会烦恼和激动，不能很好的控制自己的脾气和情绪，会与人争论，有想破坏东西的冲动。';
+            } else if (avr6 >= 3.5 && avr6 < 4.5) {
+                jls[5] = '重';
+                pys[5] = '经常有想打人或想摔东西的冲动，容易激惹，不能控制自己的行为和情绪。';
+            } else if (avr6 >= 4.5) {
+                jls[5] = '严重';
+                pys[5] = '非常容易激惹，好与人争论，经常主动攻击他人，完全不能控制自己的情绪和行为。';
             }
 
-            avr7=scores[6]/7;
-            if(avr7<1.5){
-                jls[6]='无';
-                pys[6]='无';
-            }else if(avr7>=1.5 && avr7<2.5 ){
-                jls[6]='轻';
-                pys[6]='有时怕黑或害怕一个人独处，但不会对正常生 活学习产生影响。';
-            }else if(avr7>=2.5 && avr7<3.5 ){
-                jls[6]='中';
-                pys[6]='不敢在黑暗中独处，怕单独出门，因为害怕会 刻意回避某些事物。';
-            }else if(avr7>=3.5 && avr7<4.5 ){
-                jls[6]='重';
-                pys[6]='无法单独出门，害怕在陌生的公共场所独处， 怕乘快速的交通工具，总是刻意回避使自己感到害怕的东西。';
-            }else if(avr7>=4.5){
-                jls[6]='严重';
-                pys[6]='经常处在惊吓、恐怖之中，怕出门，怕乘车， 不敢到公共场合，总是担心自己会受惊昏倒，已无法正常的生活和学习。';
+            avr7 = scores[6] / 7;
+            if (avr7 < 1.5) {
+                jls[6] = '无';
+                pys[6] = '无';
+            } else if (avr7 >= 1.5 && avr7 < 2.5) {
+                jls[6] = '轻';
+                pys[6] = '有时怕黑或害怕一个人独处，但不会对正常生 活学习产生影响。';
+            } else if (avr7 >= 2.5 && avr7 < 3.5) {
+                jls[6] = '中';
+                pys[6] = '不敢在黑暗中独处，怕单独出门，因为害怕会 刻意回避某些事物。';
+            } else if (avr7 >= 3.5 && avr7 < 4.5) {
+                jls[6] = '重';
+                pys[6] = '无法单独出门，害怕在陌生的公共场所独处， 怕乘快速的交通工具，总是刻意回避使自己感到害怕的东西。';
+            } else if (avr7 >= 4.5) {
+                jls[6] = '严重';
+                pys[6] = '经常处在惊吓、恐怖之中，怕出门，怕乘车， 不敢到公共场合，总是担心自己会受惊昏倒，已无法正常的生活和学习。';
             }
 
-            avr8=scores[7]/6;
-            if(avr8<1.5){
-                jls[7]='无';
-                pys[7]='无';
-            }else if(avr8>=1.5 && avr8<2.5 ){
-                jls[7]='轻';
-                pys[7]='性格固执。有时会有敌对性，感到别人不可信任。';
-            }else if(avr8>=2.5 && avr8<3.5 ){
-                jls[7]='中';
-                pys[7]='怀疑性明显，不轻易相信他人，常感到别人想 占自己的便宜，对自己的成绩没有作出正确的评价。';
-            }else if(avr8>=3.5 && avr8<4.5 ){
-                jls[7]='重';
-                pys[7]='精神病性:经常有幻听，感觉自己被别人控制， 有一些古怪的想法，觉得自己的身体存在严重问题，大脑有毛病，认为自己应当受到惩罚，从未感到和别人很亲近，非常孤单。';
-            }else if(avr8>=4.5){
-                jls[7]='严重';
-                pys[7]='不信任所有的人，总是怀疑别人在监视他、跟踪他，总觉得别人要占自己的便宜，或者紧张、害怕、不敢出门，无法进行正常的工作、生活。 ';
+            avr8 = scores[7] / 6;
+            if (avr8 < 1.5) {
+                jls[7] = '无';
+                pys[7] = '无';
+            } else if (avr8 >= 1.5 && avr8 < 2.5) {
+                jls[7] = '轻';
+                pys[7] = '性格固执。有时会有敌对性，感到别人不可信任。';
+            } else if (avr8 >= 2.5 && avr8 < 3.5) {
+                jls[7] = '中';
+                pys[7] = '怀疑性明显，不轻易相信他人，常感到别人想 占自己的便宜，对自己的成绩没有作出正确的评价。';
+            } else if (avr8 >= 3.5 && avr8 < 4.5) {
+                jls[7] = '重';
+                pys[7] = '精神病性:经常有幻听，感觉自己被别人控制， 有一些古怪的想法，觉得自己的身体存在严重问题，大脑有毛病，认为自己应当受到惩罚，从未感到和别人很亲近，非常孤单。';
+            } else if (avr8 >= 4.5) {
+                jls[7] = '严重';
+                pys[7] = '不信任所有的人，总是怀疑别人在监视他、跟踪他，总觉得别人要占自己的便宜，或者紧张、害怕、不敢出门，无法进行正常的工作、生活。 ';
             }
 
 
-            avr9=scores[8]/10;
-            if(avr9<1.5){
-                jls[8]='无';
-                pys[8]='无';
-            }else if(avr9>=1.5 && avr9<2.5 ){
-                jls[8]='轻';
-                pys[8]='偶而有幻听，觉得旁人能知道自己的想法，即 使和别人在一起也感到孤单。';
-            }else if(avr9>=2.5 && avr9<3.5 ){
-                jls[8]='中';
-                pys[8]='经常有幻听，感到别人能控制自己的思想，感 到自己的身体有严重问题，感觉孤单。';
-            }else if(avr9>=3.5 && avr9<4.5 ){
-                jls[8]='重';
-                pys[8]='经常有幻听，觉得自己的思维被别人控制，别 人能知道自己的思想意念，认为自己应该为自己的过失而受到惩罚。';
-            }else if(avr9>=4.5){
-                jls[8]='严重';
-                pys[8]='精神病性:经常有幻听，感觉自己被别人控制， 有一些古怪的想法，觉得自己的身体存在严重问题，大脑有毛病，认为自己应当受到惩罚，从未感到和别人很亲近，非常孤单。';
+            avr9 = scores[8] / 10;
+            if (avr9 < 1.5) {
+                jls[8] = '无';
+                pys[8] = '无';
+            } else if (avr9 >= 1.5 && avr9 < 2.5) {
+                jls[8] = '轻';
+                pys[8] = '偶而有幻听，觉得旁人能知道自己的想法，即 使和别人在一起也感到孤单。';
+            } else if (avr9 >= 2.5 && avr9 < 3.5) {
+                jls[8] = '中';
+                pys[8] = '经常有幻听，感到别人能控制自己的思想，感 到自己的身体有严重问题，感觉孤单。';
+            } else if (avr9 >= 3.5 && avr9 < 4.5) {
+                jls[8] = '重';
+                pys[8] = '经常有幻听，觉得自己的思维被别人控制，别 人能知道自己的思想意念，认为自己应该为自己的过失而受到惩罚。';
+            } else if (avr9 >= 4.5) {
+                jls[8] = '严重';
+                pys[8] = '精神病性:经常有幻听，感觉自己被别人控制， 有一些古怪的想法，觉得自己的身体存在严重问题，大脑有毛病，认为自己应当受到惩罚，从未感到和别人很亲近，非常孤单。';
             }
 
-            avr10=scores[9]/7;
-            if(avr10<1.5){
-                jls[9]='无';
-                pys[9]='';
-            }else if(avr10>=1.5 && avr10<2.5 ){
-                jls[9]='轻';
-                pys[9]='';
-            }else if(avr10>=2.5 && avr10<3.5 ){
-                jls[9]='中';
-                pys[9]='';
-            }else if(avr10>=3.5 && avr10<4.5 ){
-                jls[9]='重';
-                pys[9]='';
-            }else if(avr10>=4.5){
-                jls[9]='严重';
-                pys[9]='';
+            avr10 = scores[9] / 7;
+            if (avr10 < 1.5) {
+                jls[9] = '无';
+                pys[9] = '';
+            } else if (avr10 >= 1.5 && avr10 < 2.5) {
+                jls[9] = '轻';
+                pys[9] = '';
+            } else if (avr10 >= 2.5 && avr10 < 3.5) {
+                jls[9] = '中';
+                pys[9] = '';
+            } else if (avr10 >= 3.5 && avr10 < 4.5) {
+                jls[9] = '重';
+                pys[9] = '';
+            } else if (avr10 >= 4.5) {
+                jls[9] = '严重';
+                pys[9] = '';
             }
 
 //            for (var j=0;j<arr.length;j++) {
@@ -293,7 +293,7 @@
 //                        }
 //                    });
 //            }
-           console.log(scores);
+            console.log(scores);
         }
     </script>
 </head>
@@ -324,14 +324,12 @@
 
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <ul class="nav menu">
-        <li><a href="index.html"><span class="glyphicon glyphicon-user"></span>个案信息</a></li>
-        <li class="active"><a href="evaluation.html"><span class="glyphicon glyphicon-heart"></span>心理评估</a></li>
-        <li><a href="charts.html"><span class="glyphicon glyphicon-stats"></span>录入上报表</a></li>
-        <li><a href="tables.html"><span class="glyphicon glyphicon-magnet"></span>干预后追踪</a></li>
-        <li><a href="indanger.html"><span class="glyphicon glyphicon-list-alt"></span>预警库</a></li>
-        <li><a href="helpinfo.html"><span class="glyphicon glyphicon-info-sign"></span>帮助信息</a></li>
-        <li role="presentation" class="divider"></li>
-        <li><a href="login.html"><span class="glyphicon glyphicon-user"></span>登录</a></li>
+        <li><a href="stulist.php"><span class="glyphicon glyphicon-user"></span>个案信息</a></li>
+        <li class="active"><a href="scales.php"><span class="glyphicon glyphicon-heart"></span>心理评估</a></li>
+        <li><a href="reportlist.php"><span class="glyphicon glyphicon-stats"></span>录入上报表</a></li>
+        <li><a href="scales2.php"><span class="glyphicon glyphicon-magnet"></span>干预后追踪</a></li>
+        <li><a href="indanger.php"><span class="glyphicon glyphicon-list-alt"></span>预警库</a></li>
+        <li><a href="helpinfo.php"><span class="glyphicon glyphicon-info-sign"></span>帮助信息</a></li>
     </ul>
 </div><!--/.sidebar-->
 
@@ -362,7 +360,8 @@
                             <tr>
                                 <td height="49" align="center">
                                     <div align="left">
-                                        <p> 下面是每个人都可能遇到的一些日常生活事件，究竟是好事还是坏事，可根据个人情况自行判断。这些事件可能对个人有精神上的影响（体验为紧张、压力、兴奋或苦恼等），影响的轻重程度是各不相同的，影响的持续时间也不一样。请你根据自己的情况，实事求是的回答下列问题。</p>
+                                        <p>
+                                            下面是每个人都可能遇到的一些日常生活事件，究竟是好事还是坏事，可根据个人情况自行判断。这些事件可能对个人有精神上的影响（体验为紧张、压力、兴奋或苦恼等），影响的轻重程度是各不相同的，影响的持续时间也不一样。请你根据自己的情况，实事求是的回答下列问题。</p>
                                     </div>
                                 </td>
                             </tr>
@@ -371,95 +370,125 @@
                                 <td>
                                     <div align="left"><p class="title" style="font-weight: 600; text-indent: 1em;">
                                         <?php echo $v['id']?>、 <?php echo $v['title']?></p>
-                                        <p style="font-weight: 600; text-indent: 1.5em;">事件发生时间——</p>
-                                        <div class="topic">
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c[<?php echo $v['id']?>]" value="0"> 一年前一次性事件次数:
-                                                    <input type="text" class="cnq[<?php echo $v['id']?>]" />（*如选择本项请填写次数）
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c[<?php echo $v['id']?>]" value="0"> 一年内一次性事件次数:
-                                                    <input type="text" class="cnn[<?php echo $v['id']?>]" />（*如选择本项请填写次数）
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c[<?php echo $v['id']?>]" value="1"> 长期性事件（持续时间为半年内）
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c[<?php echo $v['id']?>]" value="2"> 长期性事件（持续时间为半年以上）
-                                                </label>
-                                            </p>
-                                        </div>
-                                        <p style="font-weight: 600; text-indent: 1.5em;">性质——</p>
-                                        <div class="topic">
+                                        <p style="font-weight: 600; text-indent: 1.5em;">是否发生</p>
+                                        <label class="radio-inline yes<?php echo $v['id']?>">
+                                            <input type="radio" name="c[<?php echo $v['id']?>]" class="" value="0"> 是
+                                        </label>
+                                        <label class="radio-inline no<?php echo $v['id']?>">
+                                            <input type="radio" name="c[<?php echo $v['id']?>]" class="" value="0"> 否
+                                        </label>
+                                        <script>
+                                            $('.yes<?php echo $v[\'id\']?>').click(function () {
+                                                var isChecked = $(this).find('input[type="radio"]').is(':checked');
+                                                isChecked ? $('.isshow').show() : $('.isshow').hide();
+                                            });
+                                        </script>
+                                        <div class="isshow<?php echo $v['id']?>" style="display: none;">
+                                            <p style="font-weight: 600; text-indent: 1.5em;">事件发生时间</p>
+                                            <div class="topic">
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c[<?php echo $v['id']?>]" value="0">
+                                                        一年前一次性事件次数:
+                                                        <input type="text" class="cnq[<?php echo $v['id']?>]"/>（*如选择本项请填写次数）
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c[<?php echo $v['id']?>]" value="0">
+                                                        一年内一次性事件次数:
+                                                        <input type="text" class="cnn[<?php echo $v['id']?>]"/>（*如选择本项请填写次数）
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c[<?php echo $v['id']?>]" value="1">
+                                                        长期性事件（持续时间为半年内）
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c[<?php echo $v['id']?>]" value="2">
+                                                        长期性事件（持续时间为半年以上）
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <p style="font-weight: 600; text-indent: 1.5em;">性质</p>
+                                            <div class="topic">
 
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c2[<?php echo $v['id']?>]" value="0"> 好事
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c2[<?php echo $v['id']?>]" value="1"> 坏事
-                                                </label>
-                                            </p>
-                                        </div>
-                                        <p style="font-weight: 600; text-indent: 1.5em;">精神影响程度——</p>
-                                        <div class="topic">
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c3[<?php echo $v['id']?>]" value="0"> 无影响
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c3[<?php echo $v['id']?>]" value="1"> 轻度
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c3[<?php echo $v['id']?>]" value="2"> 中度
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c3[<?php echo $v['id']?>]" value="3"> 重度
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c3[<?php echo $v['id']?>]" value="4"> 极重
-                                                </label>
-                                            </p>
-                                        </div>
-                                        <p style="font-weight: 600; text-indent: 1.5em;">影响持续时间——</p>
-                                        <div class="topic">
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c4[<?php echo $v['id']?>]" value="1"> 三年内
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c4[<?php echo $v['id']?>]" value="2"> 半年内
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c4[<?php echo $v['id']?>]" value="3"> 一年内
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label class="radio">
-                                                    <input type="radio" name="c4[<?php echo $v['id']?>]" value="4"> 一年上
-                                                </label>
-                                            </p>
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c2[<?php echo $v['id']?>]" value="0">
+                                                        好事
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c2[<?php echo $v['id']?>]" value="1">
+                                                        坏事
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <p style="font-weight: 600; text-indent: 1.5em;">精神影响程度</p>
+                                            <div class="topic">
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c3[<?php echo $v['id']?>]" value="0">
+                                                        无影响
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c3[<?php echo $v['id']?>]" value="1">
+                                                        轻度
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c3[<?php echo $v['id']?>]" value="2">
+                                                        中度
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c3[<?php echo $v['id']?>]" value="3">
+                                                        重度
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c3[<?php echo $v['id']?>]" value="4">
+                                                        极重
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <p style="font-weight: 600; text-indent: 1.5em;">影响持续时间</p>
+                                            <div class="topic">
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c4[<?php echo $v['id']?>]" value="1">
+                                                        三年内
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c4[<?php echo $v['id']?>]" value="2">
+                                                        半年内
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c4[<?php echo $v['id']?>]" value="3">
+                                                        一年内
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label class="radio">
+                                                        <input type="radio" name="c4[<?php echo $v['id']?>]" value="4">
+                                                        一年上
+                                                    </label>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </td>
