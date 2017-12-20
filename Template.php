@@ -20,5 +20,6 @@ $document->setValue('Value10', 'Pluto');
 $document->setValue('weekday', date('l'));
 $document->setValue('time', date('H:i'));
 
-$document->save('XX量表'.$stunum.$date.'.docx');
+$document->save('上报表'.$stunum.$date.'.docx');
+require './down.html?stunum=<?php echo $stunum;?>';
 ?>

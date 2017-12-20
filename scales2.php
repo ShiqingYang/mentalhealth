@@ -11,4 +11,4 @@ $sf=$_SESSION['user']['sf'];
 $date=date('Y-m');
 $restunum=$_GET['snum'];
 
-require './scales.html';
+require './scales2.html';

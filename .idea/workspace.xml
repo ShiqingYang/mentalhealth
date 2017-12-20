@@ -2,25 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db4e0624-6e3b-4717-a897-cd54780fbc83" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scales2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scales2.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/charts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edit.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/evaluation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forms.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/panels.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tables.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Solarsystem.docx" afterPath="$PROJECT_DIR$/Solarsystem.docx" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Solarsystem.docx" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Template.docx" afterPath="$PROJECT_DIR$/Template.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Template.php" afterPath="$PROJECT_DIR$/Template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caseinfo.html" afterPath="$PROJECT_DIR$/caseinfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create.html" afterPath="$PROJECT_DIR$/create.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpinfo.html" afterPath="$PROJECT_DIR$/helpinfo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/indanger.html" afterPath="$PROJECT_DIR$/indanger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/indanger.php" afterPath="$PROJECT_DIR$/indanger.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.html" afterPath="$PROJECT_DIR$/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/makereport.html" afterPath="$PROJECT_DIR$/makereport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/makereport.php" afterPath="$PROJECT_DIR$/makereport.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reportlist.html" afterPath="$PROJECT_DIR$/reportlist.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scales.html" afterPath="$PROJECT_DIR$/scales.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scales2.html" afterPath="$PROJECT_DIR$/scales2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scales2.php" afterPath="$PROJECT_DIR$/scales2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scalesuicide.html" afterPath="$PROJECT_DIR$/scalesuicide.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scaletest1.html" afterPath="$PROJECT_DIR$/scaletest1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scaletest2.html" afterPath="$PROJECT_DIR$/scaletest2.html" />
@@ -44,30 +39,28 @@
       <file leaf-file-name="scaletest3.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scaletest3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="337" column="83" lean-forward="false" selection-start-line="337" selection-start-column="83" selection-end-line="337" selection-end-column="83" />
+            <state relative-caret-position="293">
+              <caret line="340" column="40" lean-forward="false" selection-start-line="340" selection-start-column="40" selection-end-line="340" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scaletest6.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scaletest6.php">
+      <file leaf-file-name="scaletest4.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scaletest4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-              <folding>
-                <marker date="1513435424284" expanded="true" signature="201:225" ph="select * fro... scaletest6" />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="160" column="40" lean-forward="false" selection-start-line="160" selection-start-column="40" selection-end-line="160" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scaletest6.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scaletest6.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scaletest6.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="386" column="99" lean-forward="true" selection-start-line="386" selection-start-column="99" selection-end-line="386" selection-end-column="99" />
+            <state relative-caret-position="319">
+              <caret line="329" column="40" lean-forward="false" selection-start-line="329" selection-start-column="40" selection-end-line="329" selection-end-column="40" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#1;n#div#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -81,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scaletest2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scaletest2.html">
+      <file leaf-file-name="scaletest5.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scaletest5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="156" column="70" lean-forward="false" selection-start-line="156" selection-start-column="58" selection-end-line="156" selection-end-column="70" />
+            <state relative-caret-position="293">
+              <caret line="93" column="40" lean-forward="false" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -94,83 +87,61 @@
       <file leaf-file-name="scaletest7.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scaletest7.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="137" column="20" lean-forward="true" selection-start-line="137" selection-start-column="20" selection-end-line="137" selection-end-column="20" />
+            <state relative-caret-position="241">
+              <caret line="135" column="40" lean-forward="false" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stulistforgyhzz.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stulistforgyhzz.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stulistforxlpg.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stulistforxlpg.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="858">
+              <caret line="48" column="71" lean-forward="true" selection-start-line="48" selection-start-column="71" selection-end-line="48" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scaletest2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scaletest2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="101" column="40" lean-forward="false" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scalesuicide.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scalesuicide.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="64" column="40" lean-forward="false" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
               <folding>
-                <element signature="e#4418#4424#1" expanded="true" />
-                <element signature="e#4442#4448#0" expanded="true" />
-                <element signature="e#4448#4454#0" expanded="true" />
-                <element signature="e#4455#4461#0" expanded="true" />
-                <element signature="e#4461#4467#0" expanded="true" />
-                <element signature="e#4516#4522#0" expanded="true" />
-                <element signature="e#4522#4528#0" expanded="true" />
-                <element signature="e#4528#4534#0" expanded="true" />
-                <element signature="e#4534#4540#0" expanded="true" />
-                <element signature="e#4540#4546#0" expanded="true" />
-                <element signature="e#4546#4552#0" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stuadminadd.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stuadminadd.html">
+      <file leaf-file-name="scaletest1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scaletest1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stucaseinfo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stucaseinfo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-156">
-              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stuedit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stuedit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3716">
-              <caret line="177" column="37" lean-forward="true" selection-start-line="177" selection-start-column="37" selection-end-line="177" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stuedit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stuedit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding>
-                <marker date="1513079270749" expanded="true" signature="649:693" ph="update stuin... " />
-                <marker date="1513079270749" expanded="true" signature="1503:1550" ph="update tests... " />
-                <marker date="1513079270749" expanded="true" signature="6740:6801" ph="update tests... " />
-                <marker date="1513079270749" expanded="true" signature="7005:7101" ph="select stunu... stuinfo" />
-                <marker date="1513079270749" expanded="true" signature="7350:7429" ph="select * fro... testscore" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stuedit2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stuedit2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="46" column="86" lean-forward="true" selection-start-line="46" selection-start-column="86" selection-end-line="46" selection-end-column="86" />
+            <state relative-caret-position="286">
+              <caret line="113" column="40" lean-forward="false" selection-start-line="113" selection-start-column="40" selection-end-line="113" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -198,6 +169,7 @@
       <find>form</find>
       <find>answer</find>
       <find>btn-de</find>
+      <find>db_query</find>
     </findStrings>
     <replaceStrings>
       <replace>radio</replace>
@@ -216,14 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/edit.html" />
-        <option value="$PROJECT_DIR$/login.html" />
-        <option value="$PROJECT_DIR$/library/function.php" />
-        <option value="$PROJECT_DIR$/caseinfo.php" />
-        <option value="$PROJECT_DIR$/stuadminadd.php" />
-        <option value="$PROJECT_DIR$/checkfill.php" />
         <option value="$PROJECT_DIR$/stuedit2.html" />
         <option value="$PROJECT_DIR$/stuhelpinfo.html" />
         <option value="$PROJECT_DIR$/stuedit.html" />
@@ -247,13 +211,23 @@
         <option value="$PROJECT_DIR$/scaletest7.php" />
         <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/reportlist.php" />
-        <option value="$PROJECT_DIR$/makereport.php" />
-        <option value="$PROJECT_DIR$/Template.php" />
         <option value="$PROJECT_DIR$/caseinfo.html" />
         <option value="$PROJECT_DIR$/create.html" />
+        <option value="$PROJECT_DIR$/Template.php" />
+        <option value="$PROJECT_DIR$/makereport.php" />
+        <option value="$PROJECT_DIR$/down.php" />
+        <option value="$PROJECT_DIR$/down.html" />
+        <option value="$PROJECT_DIR$/login.html" />
+        <option value="$PROJECT_DIR$/scales2.php" />
+        <option value="$PROJECT_DIR$/stulistforxlpg.php" />
+        <option value="$PROJECT_DIR$/stulistforgyhzz.php" />
+        <option value="$PROJECT_DIR$/stulistforxlpg.html" />
         <option value="$PROJECT_DIR$/indanger.php" />
+        <option value="$PROJECT_DIR$/stulist.html" />
         <option value="$PROJECT_DIR$/helpinfo.html" />
         <option value="$PROJECT_DIR$/indanger.html" />
+        <option value="$PROJECT_DIR$/makereport.html" />
+        <option value="$PROJECT_DIR$/reportlist.html" />
         <option value="$PROJECT_DIR$/scales.html" />
         <option value="$PROJECT_DIR$/scales2.html" />
         <option value="$PROJECT_DIR$/scalesuicide.html" />
@@ -262,11 +236,9 @@
         <option value="$PROJECT_DIR$/scaletest3.html" />
         <option value="$PROJECT_DIR$/scaletest4.html" />
         <option value="$PROJECT_DIR$/scaletest5.html" />
-        <option value="$PROJECT_DIR$/scaletest7.html" />
-        <option value="$PROJECT_DIR$/stulist.html" />
-        <option value="$PROJECT_DIR$/makereport.html" />
-        <option value="$PROJECT_DIR$/reportlist.html" />
         <option value="$PROJECT_DIR$/scaletest6.html" />
+        <option value="$PROJECT_DIR$/scaletest7.html" />
+        <option value="$PROJECT_DIR$/stulistforgyhzz.html" />
       </list>
     </option>
   </component>
@@ -314,6 +286,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mentalhealth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mentalhealth" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -349,19 +335,19 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="C:/Git/bin/git.exe" />
-    <property name="SearchEverywhereHistoryKey" value="db_fetch_all&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="db_qu&#9;null&#9;null&#10;db_fetch_all&#9;null&#9;null" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\mentalhealth" />
-      <recent name="C:\Users\Y\Desktop\btst_5_medialoot" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\mentalhealth" />
       <recent name="C:\wamp\www\mentalhealth\stuadmin" />
       <recent name="C:\wamp\www\mentalhealth\studentadmin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\mentalhealth" />
+      <recent name="C:\Users\Y\Desktop\btst_5_medialoot" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -480,11 +466,12 @@
       <workItem from="1513158545069" duration="28410000" />
       <workItem from="1513410554274" duration="10263000" />
       <workItem from="1513477426888" duration="20273000" />
+      <workItem from="1513730260435" duration="8484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200955000" />
+    <option name="totallyTimeSpent" value="209439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -493,7 +480,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -521,105 +508,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scaletest3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <marker date="1513163292400" expanded="true" signature="201:225" ph="select * fro... scaletest3" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scaletest4.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <marker date="1513222766232" expanded="true" signature="201:225" ph="select * fro... scaletest4" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1319">
-          <caret line="74" column="77" lean-forward="true" selection-start-line="74" selection-start-column="77" selection-end-line="74" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="108" lean-forward="false" selection-start-line="12" selection-start-column="108" selection-end-line="12" selection-end-column="108" />
-          <folding>
-            <marker date="1512536855525" expanded="true" signature="316:397" ph="select `id`,... admin" />
-            <marker date="1512536855525" expanded="true" signature="316:398" ph="select `id`,... admin" />
-            <marker date="1512536855525" expanded="true" signature="316:400" ph="select `id`,... admin" />
-            <marker date="1512536855525" expanded="true" signature="316:412" ph="select `id`,... admin" />
-            <marker date="1512536855525" expanded="true" signature="316:413" ph="select `id`,... admin" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scaletest1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="75" lean-forward="false" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scaletest5.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scalesuicide.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scaletest7.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <marker date="1513435436687" expanded="true" signature="201:225" ph="select * fro... scaletest7" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scales.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
-          <caret line="890" column="14" lean-forward="false" selection-start-line="890" selection-start-column="14" selection-end-line="890" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Examples/Text.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="24" column="67" lean-forward="false" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHPWord.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="747">
@@ -632,33 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="38" column="96" lean-forward="true" selection-start-line="38" selection-start-column="96" selection-end-line="38" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reportlist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="62" lean-forward="false" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
-          <folding>
-            <marker date="1513496126488" expanded="true" signature="201:267" ph="select * fro... testscore" />
-            <marker date="1513496126488" expanded="true" signature="201:301" ph="select * fro... testscore" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scales2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -694,38 +555,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/charts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3245">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forms.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1326">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2333">
-          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/charts.html" />
+    <entry file="file://$PROJECT_DIR$/evaluation.html" />
+    <entry file="file://$PROJECT_DIR$/forms.html" />
+    <entry file="file://$PROJECT_DIR$/edit.html" />
     <entry file="file://$PROJECT_DIR$/helpinfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -734,61 +567,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indanger.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="81" lean-forward="true" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
-          <folding>
-            <marker date="1513513740580" expanded="true" signature="182:255" ph="select * fro... testscore" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indanger.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="48" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2101">
-          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/panels.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1560">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/panels.html" />
     <entry file="file://$PROJECT_DIR$/stuhelpinfo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-494">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stulist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="40" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/caseinfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -796,160 +579,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="42" column="92" lean-forward="false" selection-start-line="42" selection-start-column="92" selection-end-line="42" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helpinfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/makereport.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#div#3;n#div#1;n#form#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#3;n#div#1;n#form#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/makereport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reportlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scales.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-          <folding>
-            <element signature="e#2914#2920#0" expanded="true" />
-            <element signature="e#2920#2926#0" expanded="true" />
-            <element signature="e#3176#3182#0" expanded="true" />
-            <element signature="e#3182#3188#0" expanded="true" />
-            <element signature="e#3467#3473#0" expanded="true" />
-            <element signature="e#3473#3479#0" expanded="true" />
-            <element signature="e#3744#3750#0" expanded="true" />
-            <element signature="e#3750#3756#0" expanded="true" />
-            <element signature="e#4013#4019#0" expanded="true" />
-            <element signature="e#4019#4025#0" expanded="true" />
-            <element signature="e#4276#4282#0" expanded="true" />
-            <element signature="e#4282#4288#0" expanded="true" />
-            <element signature="e#4549#4555#0" expanded="true" />
-            <element signature="e#4555#4561#0" expanded="true" />
-            <element signature="e#4820#4826#0" expanded="true" />
-            <element signature="e#4826#4832#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scales2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="39" column="6" lean-forward="true" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scalesuicide.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="63" column="47" lean-forward="true" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scaletest1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="110" column="45" lean-forward="false" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scaletest4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="161" column="35" lean-forward="false" selection-start-line="161" selection-start-column="35" selection-end-line="161" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scaletest5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="93" column="50" lean-forward="false" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scaletest7.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="137" column="20" lean-forward="true" selection-start-line="137" selection-start-column="20" selection-end-line="137" selection-end-column="20" />
-          <folding>
-            <element signature="e#4418#4424#1" expanded="true" />
-            <element signature="e#4442#4448#0" expanded="true" />
-            <element signature="e#4448#4454#0" expanded="true" />
-            <element signature="e#4455#4461#0" expanded="true" />
-            <element signature="e#4461#4467#0" expanded="true" />
-            <element signature="e#4516#4522#0" expanded="true" />
-            <element signature="e#4522#4528#0" expanded="true" />
-            <element signature="e#4528#4534#0" expanded="true" />
-            <element signature="e#4534#4540#0" expanded="true" />
-            <element signature="e#4540#4546#0" expanded="true" />
-            <element signature="e#4546#4552#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stuadminadd.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+        <state relative-caret-position="1092">
+          <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stucaseinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-156">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="390">
+          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stuedit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3716">
-          <caret line="177" column="37" lean-forward="true" selection-start-line="177" selection-start-column="37" selection-end-line="177" selection-end-column="37" />
+        <state relative-caret-position="4602">
+          <caret line="177" column="37" lean-forward="false" selection-start-line="177" selection-start-column="37" selection-end-line="177" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -970,24 +622,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stuedit2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="46" column="86" lean-forward="true" selection-start-line="46" selection-start-column="86" selection-end-line="46" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scaletest3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="337" column="83" lean-forward="false" selection-start-line="337" selection-start-column="83" selection-end-line="337" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scaletest2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="156" column="70" lean-forward="false" selection-start-line="156" selection-start-column="58" selection-end-line="156" selection-end-column="70" />
+        <state relative-caret-position="1196">
+          <caret line="46" column="86" lean-forward="false" selection-start-line="46" selection-start-column="86" selection-end-line="46" selection-end-column="86" />
           <folding />
         </state>
       </provider>
@@ -995,17 +631,302 @@
     <entry file="file://$PROJECT_DIR$/scaletest6.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding>
             <marker date="1513435424284" expanded="true" signature="201:225" ph="select * fro... scaletest6" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="23" column="51" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="23" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reportlist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="62" lean-forward="false" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+          <folding>
+            <marker date="1513496126488" expanded="true" signature="201:267" ph="select * fro... testscore" />
+            <marker date="1513496126488" expanded="true" signature="201:301" ph="select * fro... testscore" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="75" column="21" lean-forward="false" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/makereport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding>
+            <marker date="1513734711398" expanded="true" signature="375:443" ph="insert into report... " />
+            <marker date="1513734711398" expanded="true" signature="375:444" ph="insert into report... " />
+            <marker date="1513734711398" expanded="true" signature="375:456" ph="insert into report... " />
+            <marker date="1513734711398" expanded="true" signature="375:467" ph="insert into report... " />
+            <marker date="1513734711398" expanded="true" signature="375:478" ph="insert into report... " />
+            <marker date="1513734711398" expanded="true" signature="375:489" ph="insert into report... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/down.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+          <folding>
+            <marker date="1513736158271" expanded="true" signature="319:365" ph="select * fro... report" />
+            <marker date="1513736158271" expanded="true" signature="319:366" ph="select * fro... report" />
+            <marker date="1513736158271" expanded="true" signature="574:632" ph="select stuna... stuinfo" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/down.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="55" column="35" lean-forward="false" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scales2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="38" />
+          <folding>
+            <marker date="1512536855525" expanded="true" signature="316:397" ph="select `id`,... admin" />
+            <marker date="1512536855525" expanded="true" signature="316:398" ph="select `id`,... admin" />
+            <marker date="1512536855525" expanded="true" signature="316:400" ph="select `id`,... admin" />
+            <marker date="1512536855525" expanded="true" signature="316:412" ph="select `id`,... admin" />
+            <marker date="1512536855525" expanded="true" signature="316:413" ph="select `id`,... admin" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stulistforgyhzz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <marker date="1513737416864" expanded="true" signature="182:255" ph="select * fro... testscore" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stulistforxlpg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <marker date="1513737298792" expanded="true" signature="182:255" ph="select * fro... testscore" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/removedanger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1513737678853" expanded="true" signature="182:273" ph="select * fro... testscore" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indanger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="71" lean-forward="false" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+          <folding>
+            <marker date="1513738178930" expanded="true" signature="182:274" ph="select * fro... testscore" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stulist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="264" column="72" lean-forward="false" selection-start-line="264" selection-start-column="72" selection-end-line="264" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/caseinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indanger.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="45" column="44" lean-forward="false" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-962">
+          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/makereport.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#div#1;n#form#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#3;n#div#1;n#form#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reportlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scales.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+          <folding>
+            <element signature="e#2930#2936#0" expanded="true" />
+            <element signature="e#2936#2942#0" expanded="true" />
+            <element signature="e#3192#3198#0" expanded="true" />
+            <element signature="e#3198#3204#0" expanded="true" />
+            <element signature="e#3483#3489#0" expanded="true" />
+            <element signature="e#3489#3495#0" expanded="true" />
+            <element signature="e#3760#3766#0" expanded="true" />
+            <element signature="e#3766#3772#0" expanded="true" />
+            <element signature="e#4029#4035#0" expanded="true" />
+            <element signature="e#4035#4041#0" expanded="true" />
+            <element signature="e#4292#4298#0" expanded="true" />
+            <element signature="e#4298#4304#0" expanded="true" />
+            <element signature="e#4565#4571#0" expanded="true" />
+            <element signature="e#4571#4577#0" expanded="true" />
+            <element signature="e#4836#4842#0" expanded="true" />
+            <element signature="e#4842#4848#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scales2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="46" column="55" lean-forward="false" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scalesuicide.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="64" column="40" lean-forward="false" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scaletest1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="113" column="40" lean-forward="false" selection-start-line="113" selection-start-column="40" selection-end-line="113" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scaletest2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="101" column="40" lean-forward="false" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scaletest3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="340" column="40" lean-forward="false" selection-start-line="340" selection-start-column="40" selection-end-line="340" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scaletest4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="160" column="40" lean-forward="false" selection-start-line="160" selection-start-column="40" selection-end-line="160" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scaletest5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="93" column="40" lean-forward="false" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scaletest6.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="386" column="99" lean-forward="true" selection-start-line="386" selection-start-column="99" selection-end-line="386" selection-end-column="99" />
+        <state relative-caret-position="319">
+          <caret line="329" column="40" lean-forward="false" selection-start-line="329" selection-start-column="40" selection-end-line="329" selection-end-column="40" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#1;n#div#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1015,6 +936,30 @@
             <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scaletest7.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="135" column="40" lean-forward="false" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stulistforgyhzz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stulistforxlpg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="48" column="71" lean-forward="true" selection-start-line="48" selection-start-column="71" selection-end-line="48" selection-end-column="71" />
+          <folding />
         </state>
       </provider>
     </entry>

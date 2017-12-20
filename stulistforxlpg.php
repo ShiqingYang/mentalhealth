@@ -8,6 +8,6 @@
 require './init.php';
 $username=$_SESSION['user']['username'];
 $sf=$_SESSION['user']['sf'];
-$sql="select * from testscore WHERE college ='".$sf."' and totalscore>=10 order by totalscore desc";
+$sql="select * from testscore WHERE college ='".$sf."' order by totalscore desc";
 $rows=db_fetch_all($sql);
-require 'indanger.html';
+require 'stulistforxlpg.html';
